@@ -84,14 +84,17 @@ export default function Header() {
                     className="aspect-square object-cover"
                 />
             </div>
-            {isHomePage && <div id = "welcome" className="w-29/48 text-2xl"> 
-                <h1 className="font-bold">Welcome!</h1>
-                <p className="mt-2 text-base">
-                    My name is Max Zhang. I am currently a junior at Irvington High School. In my freetime, you may find me <Link className="text-[#4A90E2]" href="/drawings">drawing</Link>, watching <Link className="text-[#4A90E2]" href="/movies">movies</Link>, playing <Link className="text-[#4A90E2]" href="/meaning">badminton</Link>, or working my part-time at <Link className="text-[#4A90E2]" href="https://www.amctheatres.com/">AMC Theaters</Link> (and much more). This site is also my everything collection of technical research and personal projects, and everything else that matters. For more technical people, I am interested in multilingual AI safety research, mechanistic interpretability, and measurement science. Special thanks to my mentors thus far: <Link className="text-[#4A90E2]" href="https://ai.stanford.edu/~sttruong/">Sang Truong</Link>, <Link className="text-[#4A90E2]" href="https://nathanhu0.github.io/">Nathan Hu</Link>, and <Link className="text-[#4A90E2]" href="https://www.linkedin.com/in/haihaoliu/">Haihao Liu</Link>. Feel free to leave feedback! I spent a while learning and personally coding most of this site.
-                </p>
+        <div id="welcome" className="relative w-29/48 text-2xl">
+            <Image
+                src="/8w8hnpsle8la1.jpg"
+                alt="calvin_hobbes"
+                width={541}
+                height={172}
+                className="object-cover -ml-1"
+            />
+            <Link href = "https://www.reddit.com/r/calvinandhobbes/comments/8f52ej/i_colorized_my_favorite_calvin_and_hobbes_strip/" className="mt-2 text-xl">calvin and hobbes</Link>
+        </div>
 
-                {/* Smaller text explaining self */}
-            </div>}
         
         </div>
         <div className={`mt-4 w-1/3 transition-opacity duration-1000 ${isVisible ? "opacity-100" : "opacity-0"}`}>
