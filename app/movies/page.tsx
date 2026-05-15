@@ -58,12 +58,17 @@ export default function moviesPage(){
                                 className="w-full h-full object-contain transition-transform duration-300 hover:scale-105"
                                 />
                             </div>
+                            <div className="flex flex-col">
+                                <p>add hop in feature</p>
+                                <img
+                                src="movies/groupphoto.png"
+                                alt="grouphoto"
+                                className="w-full h-full object-contain transition-transform duration-300 hover:scale-105"
+                                />
+
+
+                            </div>
                             
-                            <img
-                            src="movies/groupphoto.png"
-                            alt="grouphoto"
-                            className="w-full h-full object-contain transition-transform duration-300 hover:scale-105"
-                            />
                             <img
                             src="movies/watching movies.png"
                             alt="amc"
@@ -116,7 +121,7 @@ export default function moviesPage(){
 
                     {/* movies in genearl */}
                     <h1 className="mt-15 text-4xl mb-3 self-center ">Movies, films, and anime in general</h1>
-                    <h1 className=" text-2xl mb-7 self-center ">mostly during junior year. I usually watch something every week. This started because of AMC and surprisingly AP Lang, which made media more interesting in general. Follow my new <Link className="text-[#0064C7]" href="https://letterboxd.com/maxz119/">letterboxd.</Link></h1>
+                    <h1 className=" text-2xl mb-7 self-center ">Mostly from during Junior year. I usually watch something every week. This started because of <a className="text-[#0064C7]" href="#title">AMC</a> and surprisingly AP Lang, which made media more interesting in general. Follow my new <Link className="text-[#0064C7]" href="https://letterboxd.com/maxz119/">letterboxd.</Link></h1>
 
 
                     <div className="mb-15 w-full flex flex-row gap-10">
@@ -136,7 +141,10 @@ export default function moviesPage(){
                                 ))}
                             </tbody>
                         </table>
-                        <iframe className="w-1/2" src="/life.pdf"></iframe>
+                        <div className="w-1/2 flex flex-col">
+                            <p className="mb-3">Lossy metrics (Rating /10) aren't nice. Feel free to skim through braindumps I write down after watches. Some are detailed, some aren't.</p>
+                            <iframe className="flex-1" src="/pdfjs/web/viewer.html?file=/movies/life.pdf"></iframe>
+                        </div>
 
                     </div>
                 </main>

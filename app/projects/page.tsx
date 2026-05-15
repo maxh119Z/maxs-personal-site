@@ -10,9 +10,11 @@ import Image from "next/image";
 export default function projectsPage(){
     const [showMore, setShowMore] = useState(true);
     const [showMoreSecond, setShowMoreSecond] = useState(true);
-    const [showMoreThird, setShowMoreThird] = useState(true);
+    const [showMoreThird, setShowMoreThird] = useState(false);
     const [showMoreFourth, setShowMoreFourth] = useState(false);
-    const [showBadminton, setShowBadminton] = useState(true);
+    const [showBadminton, setShowBadminton] = useState(false);
+    const [showUnifyImage, setShowUnifyImage] = useState(false);
+    const [showGameSwordImage, setShowGameSwordImage] = useState(false);
 
     return (
         <div className="flex flex-col flex-1 items-center justify-center text-black bg-white font-sans">
@@ -321,12 +323,12 @@ export default function projectsPage(){
                         <h2 className="text-2xl font-black">
                             Real-Time Badminton Form Evaluation (not finished, currently working on)
                         </h2>
-                        {/* <button
+                        <button
                             onClick={() => setShowBadminton(!showBadminton)}
                             className="text-xl text-[#0064C7] hover:opacity-70"
                         >
                             {showBadminton ? "▲" : "▼"}
-                        </button> */}
+                        </button>
                     </div>
 
                     <div
@@ -346,7 +348,9 @@ export default function projectsPage(){
                                 We used machine learning (logistic regression) and computer vision (convolutional neural networks) to build the &quot;Form Detection&quot; feature.
                             </li>
                         </ul>
-                        <div className="w-full flex flex-row gap-10 py-6 h-[600px]">
+                    </div>
+
+                    <div className="w-full flex flex-row gap-10 py-6 h-[600px]">
                             <div className="flex-[5] flex flex-col justify-start">
                                 <p className="text-center pb-2">Notes</p>
                                 <div className="w-full h-2/3">
@@ -381,7 +385,6 @@ export default function projectsPage(){
                                     />
                                 </div>
                             </div>
-                        </div>
                     </div>
                 </div>
 
@@ -400,20 +403,35 @@ export default function projectsPage(){
                             />
                         </div>
                         
-                        <div className="w-full aspect-[4/3] relative mt-3">
-                            <Image
-                                src="/ps5.png"
-                                alt="PS5 prize"
-                                fill
-                                className="object-contain"
-                            />
+                        <div
+                            className={`
+                                w-full overflow-hidden transition-all duration-500 ease-in-out
+                                ${showUnifyImage ? "opacity-100 max-h-[1000px] mt-3" : "max-h-0 opacity-0"}
+                            `}
+                        >
+                            <div className="w-full aspect-[4/3] relative">
+                                <Image
+                                    src="/ps5.png"
+                                    alt="PS5 prize"
+                                    fill
+                                    className="object-contain"
+                                />
+                            </div>
                         </div>
-                        <p className="text-center font-semibold">
-                            1st overall at{" "}
-                            <Link className="text-[#0064C7]" href="https://bellhacks.com/">
-                                Bellhacks
-                            </Link>
-                            , won two PS5s
+                        <p className="text-center font-semibold mt-3 flex flex-row items-center justify-center gap-2">
+                            <span>
+                                1st overall at{" "}
+                                <Link className="text-[#0064C7]" href="https://bellhacks.com/">
+                                    Bellhacks
+                                </Link>
+                                , won two PS5s
+                            </span>
+                            <button
+                                onClick={() => setShowUnifyImage(!showUnifyImage)}
+                                className="text-[#0064C7] hover:opacity-70"
+                            >
+                                {showUnifyImage ? "▲" : "▼"}
+                            </button>
                         </p>
                         <p className="text-center text-sm opacity-70">December 2025</p>
                         <div className="flex flex-row justify-center gap-5 pt-2">
@@ -474,20 +492,35 @@ export default function projectsPage(){
                                 allowFullScreen
                             />
                         </div>
-                        <div className="w-full aspect-[4/3] relative mt-3">
-                            <Image
-                                src="/vikinghacks_1_51.jpg"
-                                alt="VikingHacks"
-                                fill
-                                className="object-contain"
-                            />
+                        <div
+                            className={`
+                                w-full overflow-hidden transition-all duration-500 ease-in-out
+                                ${showGameSwordImage ? "opacity-100 max-h-[1000px] mt-3" : "max-h-0 opacity-0"}
+                            `}
+                        >
+                            <div className="w-full aspect-[4/3] relative">
+                                <Image
+                                    src="/vikinghacks_1_51.jpg"
+                                    alt="VikingHacks"
+                                    fill
+                                    className="object-contain"
+                                />
+                            </div>
                         </div>
-                        <p className="text-center pt-3 font-semibold">
-                            Runner-up at{" "}
-                            <Link className="text-[#0064C7]" href="https://www.vikinghacks.com/">
-                                VikingHacks
-                            </Link>
-                            , Future of Entertainment
+                        <p className="text-center pt-3 font-semibold flex flex-row items-center justify-center gap-2">
+                            <span>
+                                Runner-up at{" "}
+                                <Link className="text-[#0064C7]" href="https://www.vikinghacks.com/">
+                                    VikingHacks
+                                </Link>
+                                , Future of Entertainment
+                            </span>
+                            <button
+                                onClick={() => setShowGameSwordImage(!showGameSwordImage)}
+                                className="text-[#0064C7] hover:opacity-70"
+                            >
+                                {showGameSwordImage ? "▲" : "▼"}
+                            </button>
                         </p>
                         <p className="text-center text-sm opacity-70">Feburary 2024</p>
                         <div className="flex flex-row justify-center gap-5 pt-2">
