@@ -11,7 +11,7 @@ export default function Home() {
         <div className="grid w-full grid-cols-2 gap-8 items-start">
           <Link href="/drawings" className="block w-full self-start">
             <Image
-              src="/drawings.jpeg"
+              src="/drawing/long.png"
               alt="drawings flowers"
               width={1800}
               height={1200}
@@ -39,7 +39,7 @@ export default function Home() {
               height={1200}
               className="w-10/12 h-auto object-contain object-left-top"
             />
-            <p className="mt-2 text-xl">movies and film</p>
+            <p className="mt-2 text-xl">watching movies</p>
           </Link>
 
           <Link href="/projects" className="block w-full self-start">

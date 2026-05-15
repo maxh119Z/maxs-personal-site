@@ -84,22 +84,41 @@ export default function Header() {
                     className="aspect-square object-cover"
                 />
             </div>
-        <div id="welcome" className="relative w-29/48 text-2xl">
-            <Image
-                src="/8w8hnpsle8la1.jpg"
-                alt="calvin_hobbes"
-                width={541}
-                height={172}
-                className="object-cover -ml-1"
-            />
-            <Link href = "https://www.reddit.com/r/calvinandhobbes/comments/8f52ej/i_colorized_my_favorite_calvin_and_hobbes_strip/" className="mt-2 text-xl">link</Link>
-        </div>
+            <div id="welcome" className="relative w-29/48 text-2xl flex flex-row items-start gap-6">
+                <div className="flex w-2/3 flex-col">
+                    <Image
+                    src="/began.png"
+                    alt="max derek kai"
+                    width={389}
+                    height={172}
+                    className="object-cover"
+                />
+                    <Link href = "https://neurips.cc/virtual/2025/loc/mexico-city/133196" className="mt-2 text-xl">Balcón del Zócalo (the start)</Link>
+                    
+                </div>
+                <div className="h-[256] border-x-1 border-solid border-[#E5E5E5]"></div>
+                <div id="new-section text-right justify-end" className="w-1/3 text-2xl">
+                    
+                    <h2 className="font-black text-[#666] mb-10">Contents</h2>
+                    <div className="flex flex-col gap-3">
+                        <a href="#research" className="font-semibold text-[#333] text-base">Research</a>
+                        <a href="#projects" className="font-semibold text-[#333] text-base">Projects</a>
+                        <a href="#hackathons" className="font-semibold text-[#333] text-base">Hackathons</a>
+                        {/* <p className="font-semibold text-[#333] text-base">Awards</p> */}
+
+                    </div>
+                    
+                </div>
+            
+            </div>
+            
+        
 
         
         </div>
         <div className={`mt-4 w-1/3 transition-opacity duration-1000 ${isVisible ? "opacity-100" : "opacity-0"}`}>
-            <h2 className="opacity-80">{quote}</h2>
-            <h3 className="opacity-50"> {attribution}<button onClick={()=>window.location.reload()} className = "pointer-events-auto ml-5 text-[#0064C7]">Refresh</button><Link className="ml-5 text-[#0064C7]" href="https://github.com/maxh119Z/simple-personal-quotes">your own mac widget</Link></h3>
+            {/* <h2 className="opacity-80">{quote}</h2>
+            <h3 className="opacity-50"> {attribution}<button onClick={()=>window.location.reload()} className = "pointer-events-auto ml-5 text-[#0064C7]">Refresh</button><Link className="ml-5 text-[#0064C7]" href="https://github.com/maxh119Z/simple-personal-quotes">your own mac widget</Link></h3> */}
         </div>
 
     </header>

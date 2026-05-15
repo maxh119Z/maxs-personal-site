@@ -10,6 +10,7 @@ export default function Header() {
     const [attribution, setAttribution] = useState("");
     const pathname = usePathname();
     const isHomePage = pathname === '/'
+    const [lightbox, setLightbox] = useState<string | null>(null);
 
     const quotes = [
         "Find a friend who is so different from you, and you can’t believe how much you have in common.",
@@ -74,7 +75,7 @@ export default function Header() {
                 <Link href="/movies">movies</Link>
             </div>
         </div>
-        <div className="mt-4 flex flex-row w-full">
+        <div onClick={() => setLightbox("/tierlist.png")} className="mt-4 flex flex-row w-full">
             <div className="w-19/48"> 
                 <Image
                     src="/selfie.jpeg"
@@ -86,13 +87,13 @@ export default function Header() {
             </div>
         <div id="welcome" className="relative w-29/48 text-2xl">
             <Image
-                src="/8w8hnpsle8la1.jpg"
-                alt="calvin_hobbes"
-                width={541}
-                height={172}
+                src="/tierlist.png"
+                alt="tierlist"
+                width={683}
+                height={200}
                 className="object-cover -ml-1"
             />
-            <Link href = "https://www.reddit.com/r/calvinandhobbes/comments/8f52ej/i_colorized_my_favorite_calvin_and_hobbes_strip/" className="mt-2 text-xl">link</Link>
+            <p  className="mt-2 text-xl">junior year watches (click)</p>
         </div>
 
         
@@ -102,6 +103,23 @@ export default function Header() {
             <h3 className="opacity-50"> {attribution}<button onClick={()=>window.location.reload()} className = "pointer-events-auto ml-5 text-[#0064C7]">Refresh</button><Link className="ml-5 text-[#0064C7]" href="https://github.com/maxh119Z/simple-personal-quotes">your own mac widget</Link></h3>
         </div>
 
+        {lightbox && (
+                <div
+                    className="fixed inset-0 bg-black/90 z-50 flex flex-col items-center justify-center p-8 cursor-zoom-out"
+                    onClick={() => setLightbox(null)}
+                >
+                    <img
+                        src={lightbox}
+                        alt="fullscreen"
+                        className="max-h-[75vh] max-w-full object-contain"
+                        onClick={(e) => e.stopPropagation()}
+                    />
+                
+                </div>
+        )}
+
     </header>
+
+    
     );
 }

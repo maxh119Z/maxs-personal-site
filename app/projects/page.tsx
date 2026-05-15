@@ -1,13 +1,510 @@
-import Header from "../components/header";
+"use client";
+
+import { useState } from "react";
+import Link from "next/link";
+import Header from "../components/header_projects";
+import Footer from "../components/footer"
+import Image from "next/image";
 
 
 export default function projectsPage(){
+    const [showMore, setShowMore] = useState(true);
+    const [showMoreSecond, setShowMoreSecond] = useState(true);
+    const [showMoreThird, setShowMoreThird] = useState(true);
+    const [showMoreFourth, setShowMoreFourth] = useState(false);
+    const [showBadminton, setShowBadminton] = useState(true);
+
     return (
         <div className="flex flex-col flex-1 items-center justify-center text-black bg-white font-sans">
-            <Header></Header>
-            <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 text-black sm:items-start">
-                <h1>projects</h1>
+            <Header/>
+
+            <main className="px-5 md:px-10 relative w-full flex-1 flex-col">
+                <h1 id = "research" className="mt-5 text-4xl">Research</h1>
+                <h1 id = "research" className="mt-1 text-lg">For less information or awards, just check my <Link className="text-[#0064C7]" href="https://www.linkedin.com/in/max-zhang-524b72361/">Linkedin.</Link></h1>
+                
+                {/* paper 1 */}
+                <div className="transition-all w-full py-7 flex-1 flex flex-row flex-start items-start gap-10 justify-center">
+                    <div className="relative w-[29.166%] text-center flex flex-col">
+                        <h2 className="text-1xl py-3">Research Paper</h2>
+                        <div className="w-full aspect-[1200/1300]">
+                            <iframe
+                                src="https://drive.google.com/file/d/1KIp_imdvIKYr7ryc2ElR_8IHjrTnJwdF/preview"
+                                className="w-full h-full"
+                                allow="autoplay"
+                            />
+                        </div>
+                    </div>
+                    <div className="transition-all relative w-[37.5%] text-center flex flex-col">
+                        <h2 className="text-1xl py-3 flex justify-center font-black">Why Do Safety Guardrails Degrade Across Languages?</h2>
+                        <div className="text-1xl flex flex-row justify-center opacity-70"><p className="font-semibold">Max Zhang<span className="text-s align-top relative -top-1">*</span></p>, Ameen Patel<span className="text-s align-top relative -top-1">*</span>, Sang Truong<span className="text-s align-top relative -top-1">**</span>, Sanmi Koyejo<span className="text-s align-top relative -top-1">**</span></div>
+                        <div className="text-1xl flex flex-row justify-center opacity-70"><span className="text-s align-top relative -top-1">*</span>: Equal contribution, <span className="text-s align-top relative -top-1">**</span>: Equal senior authorship</div>
+                        <div className="text-1xl flex flex-row justify-center opacity-70">Under submission at COLM</div>
+                        <div className="flex flex-row justify-center gap-5">
+                            <Link className="py-3 flex text-[#0064C7]" href="https://github.com/aims-foundations/safety-irt">[Github]</Link>
+                            <Link className="py-3 flex text-[#0064C7]" href="">[Data]</Link>
+                            <Link className="py-3 flex text-[#0064C7]" href="">[Arxiv (Coming Soon)]</Link>
+                            <button
+                                onClick={() => setShowMore(!showMore)}
+                                className="py-3 text-[#0064C7] hover:opacity-70">
+                                {showMore ? "▲" : "▼"}
+                            </button>
+                        </div>
+                        <div
+                            className={`
+                                mt-2 overflow-hidden transition-all duration-500 ease-in-out
+                                ${showMore ? " opacity-100" : "max-h-0 opacity-0"}
+                            `}
+                        >
+                            <Image
+                                src="/header.png"
+                                alt="Research overview image"
+                                width={389}
+                                height={172}
+                                className="w-full h-auto object-cover"
+                            />
+                            <p className="mt-2 text-base">
+                                4/3/26: visiting Sang with Ameen (also Dr. Yibo Zhang)
+                            </p>
+                        </div>
+                    </div>
+                    <div
+                        className="relative text-center flex flex-col overflow-hidden transition-all duration-500 ease-in-out"
+                        style={{
+                            width: showMore ? "29.166%" : "0px",
+                            pointerEvents: showMore ? "auto" : "none",
+                        }}
+                        >
+                        <h2 className="text-1xl py-3">Research Notes</h2>
+                        <div className="w-full aspect-[1200/1300]">
+                            <iframe
+                                src="https://drive.google.com/file/d/1foEO32ld45-J0xfPDT6m8GNRIRmn4-h7/preview"
+                                className="w-full h-full"
+                                allow="autoplay"
+                            />
+                        </div>
+                </div>
+                </div>
+
+                {/* paper 2 */}
+                <div className="transition-all w-full py-7 flex-1 flex flex-row flex-start items-start gap-10 justify-center">
+                    <div
+                        className="relative text-center flex flex-col overflow-hidden transition-all duration-500 ease-in-out"
+                        style={{
+                            width: showMoreSecond ? "29.166%" : "0px",
+                            pointerEvents: showMoreSecond ? "auto" : "none",
+                        }}>
+                        <h2 className="text-1xl py-3">Research Notes</h2>
+                        <div className="w-full aspect-[1200/1300]">
+                            <iframe
+                                src="https://drive.google.com/file/d/1spzkBKJaLNcSROjvdgrPE443c8xCx9ND/preview"
+                                className="w-full h-full"
+                                allow="autoplay"
+                            />
+                        </div>
+                    </div>
+
+                    <div className="transition-all relative w-[37.5%] text-center flex flex-col">
+                        <h2 className="text-1xl py-3 flex justify-center font-black">
+                            LLMs can Annotate Attribution Graphs
+                        </h2>
+
+                        <div className="text-1xl flex flex-row justify-center opacity-70">
+                            <p className="font-semibold">
+                                Ameen Patel
+                                <span className="text-s align-top relative -top-1">*</span>
+                            </p>
+                            , Max Zhang
+                            <span className="text-s align-top relative -top-1">*</span>
+                            , Nathan Hu.
+                        </div>
+
+                        <div className="text-1xl flex flex-row justify-center opacity-70">
+                            <span className="text-s align-top relative -top-1">*</span>: Equal contribution
+                        </div>
+
+                        <div className="text-1xl flex flex-row justify-center opacity-70">
+                            Under review at ICML Mech Interp
+                        </div>
+
+                        <div className="flex flex-row justify-center gap-5">
+                            <Link
+                                className="py-3 flex text-[#0064C7]"
+                                href="https://github.com/maxh119Z/circuit-tracer-automation"
+                            >
+                                [Github]
+                            </Link>
+
+                            <Link
+                                className="py-3 flex text-[#0064C7]"
+                                href="https://huggingface.co/datasets/circuit-tracer-automation/pipeline_automation"
+                            >
+                                [Data]
+                            </Link>
+
+                            <Link className="py-3 flex text-[#0064C7]" href="">
+                                [Arxiv Coming Soon]
+                            </Link>
+
+                            <button
+                                onClick={() => setShowMoreSecond(!showMoreSecond)}
+                                className="py-3 text-[#0064C7] hover:opacity-70"
+                            >
+                                {showMoreSecond ? "▲" : "▼"}
+                            </button>
+                        </div>
+
+                        <div
+                                className={`
+                                    mt-2 overflow-hidden transition-all duration-500 ease-in-out
+                                    ${showMoreSecond ? " opacity-100" : "max-h-0 opacity-0"}
+                                `}
+                            >
+                                <Image
+                                    src="/projects/main.png"
+                                    alt="Research main figure"
+                                    width={200}
+                                    height={100}
+                                    className="w-9/12 mx-auto h-auto object-cover"
+                                />
+                                <p className="text-base">
+                                    main figure
+                                </p>
+                            </div>
+                    </div>
+
+                    <div className="relative w-[29.166%] text-center flex flex-col">
+                        <h2 className="text-1xl py-3">Research Paper</h2>
+                        <div className="w-full aspect-[1200/1300]">
+                            <iframe
+                                src="https://drive.google.com/file/d/1rHLelFHrT7SnYm3PymH75EVKIPIvBo7N/preview"
+                                className="w-full h-full"
+                                allow="autoplay"
+                            />
+                        </div>
+                    </div>
+                </div>
+
+                {/* paper 3 */}
+                <div className="transition-all w-full py-7 flex-1 flex flex-row flex-start items-start gap-10 justify-center">
+                    <div className="relative w-[29.166%] text-center flex flex-col">
+                        <h2 className="text-1xl py-3">Research Paper</h2>
+                        <div className="w-full aspect-[1200/1300]">
+                            <iframe
+                                src="https://arxiv.org/pdf/2602.11157"
+                                className="w-full h-full"
+                                allow="autoplay"
+                            />
+                        </div>
+                    </div>
+
+                    <div className="relative w-[37.5%] text-center flex flex-col">
+                        <h2 className="text-1xl py-3 flex justify-center font-black">
+                            Response-Based Knowledge Distillation for Multilingual Jailbreak Prevention Unwittingly Compromises Safety
+                        </h2>
+                        <div className="text-1xl flex flex-row justify-center opacity-70">
+                            <p className="font-semibold">
+                                Max Zhang
+                                <span className="text-s align-top relative -top-1">*</span>
+                            </p>
+                            , Derek Liu, Kai Zhang, Joshua Franco, Haihao Liu
+                        </div>
+                        <div className="text-1xl flex flex-row justify-center opacity-70">
+                            <b><span className="text-s align-top relative -top-1">*</span>: Lead author</b>
+                        </div>
+                        <div className="text-1xl flex flex-row justify-center opacity-70">
+                            NeurIPS ResponsibleFM Workshop, <b> AACL SRW (oral)</b>
+                        </div>
+                        <div className="flex flex-row justify-center gap-5">
+                            <Link className="py-3 flex text-[#0064C7]" href="https://github.com/maxh119Z/rb-distillation-mulitlingual-safety">[Github]</Link>
+                            <Link className="py-3 flex text-[#0064C7]" href="https://arxiv.org/abs/2602.11157">[Arxiv]</Link>
+                            <button
+                                onClick={() => setShowMoreThird(!showMoreThird)}
+                                className="py-3 text-[#0064C7] hover:opacity-70">
+                                {showMoreThird ? "▲" : "▼"}
+                            </button>
+                        </div>
+                        <div
+                            className={`
+                                mt-2 flex flex-col items-center overflow-hidden transition-all duration-500 ease-in-out
+                                ${showMoreThird ? " opacity-100" : "max-h-0 opacity-0"}
+                            `}>
+                            <Image
+                                src="/projects/3-wide.png"
+                                alt="Project overview wide"
+                                width={2400}
+                                height={800}
+                                className="w-2/3 h-auto object-cover"
+                            />
+                            <p className="text-base">
+                                THE bengio?
+                            </p>
+                        </div>
+                    </div>
+
+                    <div
+                        className="relative text-center flex flex-col overflow-hidden transition-all duration-500 ease-in-out"
+                        style={{
+                            width: showMoreThird ? "29.166%" : "0px",
+                            pointerEvents: showMoreThird ? "auto" : "none",
+                        }}>
+                        <h2 className="text-1xl py-3">Mexico Group Photo</h2>
+                        <div className="w-full aspect-[1200/1300] relative overflow-hidden">
+                            <Image
+                                src="/projects/3-tall.png"
+                                alt="Project overview tall"
+                                fill
+                                className="object-cover"
+                            />
+                        </div>
+                    </div>
+                </div>
+
+                {/* paper 4 */}
+                <div className="transition-all w-full py-7 flex-1 flex flex-row flex-start items-start gap-10 justify-center">
+                    <div
+                        className="relative text-center flex flex-col overflow-hidden transition-all duration-500 ease-in-out"
+                        style={{
+                            width: showMoreFourth ? "29.166%" : "0px",
+                            pointerEvents: showMoreFourth ? "auto" : "none",
+                        }}>
+                        <h2 className="text-1xl py-3">Video</h2>
+                        <div className="w-full aspect-[1200/1300]">
+                            <iframe
+                                src="https://www.youtube.com/embed/qdrcNg7vluk"
+                                className="w-full h-full"
+                                allow="autoplay; encrypted-media"
+                                allowFullScreen
+                            />
+                        </div>
+                    </div>
+
+                    <div className="relative w-[37.5%] text-center flex flex-col">
+                        <h2 className="text-1xl py-3 flex justify-center font-black">
+                            Interactive Web: Leveraging AI-Driven Code Generation to Simplify Web Development Algorithms for Novice Programmers
+                        </h2>
+                        <div className="text-1xl flex flex-row justify-center opacity-70">
+                            Kai Zhang, Vyom Kumar
+                            <span className="text-s align-top relative -top-1">*</span>
+                            , <p className="font-semibold">Max Zhang<span className="text-s align-top relative -top-1">*</span></p>
+                        </div>
+                        <div className="text-1xl flex flex-row justify-center opacity-70">
+                            <span className="text-s align-top relative -top-1">*</span>: Equal contribution
+                        </div>
+                        <div className="flex flex-row justify-center gap-5">
+                            <Link className="py-3 flex text-[#0064C7]" href="https://www.researchgate.net/publication/388410885_Interactive_Web_Leveraging_AI-Driven_Code_Generation_to_Simplify_Web_Development_Algorithms_for_Novice_Programmers">[Paper]</Link>
+                            <Link className="py-3 flex text-[#0064C7]" href="https://www.youtube.com/watch?v=qdrcNg7vluk">[Video]</Link>
+                            <button
+                                onClick={() => setShowMoreFourth(!showMoreFourth)}
+                                className="py-3 text-[#0064C7] hover:opacity-70">
+                                {showMoreFourth ? "▲" : "▼"}
+                            </button>
+                        </div>
+                    </div>
+
+                    <div className="relative w-[29.166%] text-center flex flex-col">
+                        <h2 className="text-1xl py-3">Research Paper</h2>
+                        <div className="w-full aspect-[1200/1300]">
+                            <iframe
+                                src="https://aircconline.com/csit/papers/vol15/csit150107.pdf"
+                                className="w-full h-full"
+                                allow="autoplay"
+                            />
+                        </div>
+                    </div>
+                </div>
+
+                <h1 id = "projects" className="mt-5 text-4xl">Projects <a href="#research"  className="opacity-[0.5] px-2 !text-2xl">Research</a> <a href="#hackathons"  className="opacity-[0.5] px-2 !text-2xl">Hackathons</a></h1>
+
+                {/* badminton project */}
+                <div className="w-full mt-8">
+                    <div className="w-full flex flex-row items-center justify-between border-b border-black/20 py-3">
+                        <h2 className="text-2xl font-black">
+                            Real-Time Badminton Form Evaluation (not finished, currently working on)
+                        </h2>
+                        {/* <button
+                            onClick={() => setShowBadminton(!showBadminton)}
+                            className="text-xl text-[#0064C7] hover:opacity-70"
+                        >
+                            {showBadminton ? "▲" : "▼"}
+                        </button> */}
+                    </div>
+
+                    <div
+                        className={`
+                            overflow-hidden transition-all duration-500 ease-in-out
+                            ${showBadminton ? "opacity-100" : "max-h-0 opacity-0"}
+                        `}
+                    >
+                        <ul className="list-disc pl-8 py-4 space-y-2">
+                            <li>
+                                I built BIRDIE with my badminton teammate and school friend, <Link className="text-[#0064C7]" href="https://www.linkedin.com/in/angela-ye-bb12281ab/">Angela</Link>, to help new badminton players perfect their form.
+                            </li>
+                            <li>
+                                Created a custom, labeled dataset of badminton players&apos; forms from our local club(s) (300-400 images).
+                            </li>
+                            <li>
+                                We used machine learning (logistic regression) and computer vision (convolutional neural networks) to build the &quot;Form Detection&quot; feature.
+                            </li>
+                        </ul>
+                        <div className="w-full flex flex-row gap-10 py-6 h-[600px]">
+                            <div className="flex-[5] flex flex-col justify-start">
+                                <p className="text-center pb-2">Notes</p>
+                                <div className="w-full h-2/3">
+                                    <iframe
+                                        src="https://drive.google.com/file/d/1smi1Jb2iMasL3tM9o6RAIPHk4gsY4kBD/preview"
+                                        className="w-full h-full"
+                                        allow="autoplay"
+                                    />
+                                </div>
+                            </div>
+
+                            <div className="flex-[3] flex flex-col justify-center">
+                                <p className="text-center pb-2">App Home Page</p>
+                                <div className="w-full h-5/6 relative">
+                                    <Image
+                                        src="/homepage.png"
+                                        alt="BIRDIE home screen"
+                                        fill
+                                        className="object-contain"
+                                    />
+                                </div>
+                            </div>
+
+                            <div className="flex-[5] flex flex-col justify-end">
+                                <p className="text-center pb-2">Demo</p>
+                                <div className="w-full h-2/3">
+                                    <iframe
+                                        src="https://www.youtube.com/embed/SDFEYmgquDs"
+                                        className="w-full h-full"
+                                        allow="autoplay; encrypted-media"
+                                        allowFullScreen
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                 <h1 id = "hackathons" className="mt-5 text-4xl">Hackathons <a href="#research"  className="opacity-[0.5] px-2 !text-2xl">Research</a> <a href="#projects"  className="opacity-[0.5] px-2 !text-2xl">Projects</a></h1>
+
+                <div className="w-full flex flex-row gap-10 py-7 items-stretch">
+
+                    {/* Unify */}
+                    <div className="flex-1 flex flex-col items-center">
+                        <div className="w-full h-[450px]">
+                            <iframe
+                                src="https://www.youtube.com/embed/aJvgWYiUoP8"
+                                className="w-full h-full"
+                                allow="autoplay; encrypted-media"
+                                allowFullScreen
+                            />
+                        </div>
+                        
+                        <div className="w-full aspect-[4/3] relative mt-3">
+                            <Image
+                                src="/ps5.png"
+                                alt="PS5 prize"
+                                fill
+                                className="object-contain"
+                            />
+                        </div>
+                        <p className="text-center font-semibold">
+                            1st overall at{" "}
+                            <Link className="text-[#0064C7]" href="https://bellhacks.com/">
+                                Bellhacks
+                            </Link>
+                            , won two PS5s
+                        </p>
+                        <p className="text-center text-sm opacity-70">December 2025</p>
+                        <div className="flex flex-row justify-center gap-5 pt-2">
+                            <Link
+                                className=" flex text-[#0064C7]"
+                                href="https://devpost.com/software/unify-g8sw0d"
+                            >
+                                [Devpost]
+                            </Link>
+                            <Link
+                                className="flex text-[#0064C7]"
+                                href="https://github.com/pikull/unified-calendar"
+                            >
+                                [Github]
+                            </Link>
+                        </div>
+                    </div>
+
+                    {/* Youth4Good */}
+                    <div className="flex-1 flex flex-col items-center justify-center">
+                        <Link
+                            href="https://devpost.com/software/youth4good-website"
+                            className="relative w-full h-[450px] overflow-hidden border-black/20 hover:opacity-90 transition"
+                        >
+                            <Image
+                                src="/bayhacks.png"
+                                alt="BayHacks"
+                                fill
+                                className="object-cover"
+                            />
+        
+                        </Link>
+                        <p className="text-center pt-3 font-semibold">
+                            Winner of{" "}
+                            <Link className="text-[#0064C7]" href="https://www.instagram.com/bay_hacks/">
+                                BayHacks
+                            </Link>
+                            {" "}code4cause track, 199 participants
+                        </p>
+                        <p className="text-center text-sm opacity-70">September 2024</p>
+                        <div className="flex flex-row justify-center gap-5 pt-2">
+                            <Link
+                                className="flex text-[#0064C7]"
+                                href="https://devpost.com/software/youth4good-website"
+                            >
+                                [Devpost]
+                            </Link>
+                        </div>
+                    </div>
+
+                    {/* Game Sword */}
+                    <div className="flex-1 flex flex-col items-center">
+                        <div className="w-full h-[450px]">
+                            <iframe
+                                src="https://www.youtube.com/embed/Uf9VX2jrEQA"
+                                className="w-full h-full"
+                                allow="autoplay; encrypted-media"
+                                allowFullScreen
+                            />
+                        </div>
+                        <div className="w-full aspect-[4/3] relative mt-3">
+                            <Image
+                                src="/vikinghacks_1_51.jpg"
+                                alt="VikingHacks"
+                                fill
+                                className="object-contain"
+                            />
+                        </div>
+                        <p className="text-center pt-3 font-semibold">
+                            Runner-up at{" "}
+                            <Link className="text-[#0064C7]" href="https://www.vikinghacks.com/">
+                                VikingHacks
+                            </Link>
+                            , Future of Entertainment
+                        </p>
+                        <p className="text-center text-sm opacity-70">Feburary 2024</p>
+                        <div className="flex flex-row justify-center gap-5 pt-2">
+                            <Link
+                                className=" flex text-[#0064C7]"
+                                href="https://devpost.com/software/game-sword"
+                            >
+                                [Devpost]
+                            </Link>
+                        </div>
+
+                    </div>
+                </div>
+
             </main>
+
+            <Footer/>
         </div>
     );
 }
