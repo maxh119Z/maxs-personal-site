@@ -1,26 +1,30 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import HeaderMeaning from "../components/header_meaning";
 import Footer from "../components/footer";
 import Link from "next/link";
 
-export default function meaningsPage() {
-    const [showGif, setShowGif] = useState(false);
-    const [gifTs, setGifTs] = useState(0);
-    const [shake, setShake] = useState(false);
+// point.gif total duration (sum of frame delays in metadata) = 1890ms
+const GIF_DURATION = 1890;
 
-    useEffect(() => {
-        setGifTs(Date.now());
-        setShowGif(true);
-        const hide = setTimeout(() => setShowGif(false), 2274);
-        const shakeOn = setTimeout(() => setShake(true), 1644);
-        const shakeOff = setTimeout(() => setShake(false), 1644 + 300);
-        return () => {
-            clearTimeout(hide);
-            clearTimeout(shakeOn);
-            clearTimeout(shakeOff);
-        };
+export default function meaningsPage() {
+    const [gifTs] = useState(() => Date.now());
+    const [showGif, setShowGif] = useState(true);
+    const [shake, setShake] = useState(false);
+    const timersRef = useRef<ReturnType<typeof setTimeout>[]>([]);
+
+    const handleGifLoad = () => {
+        if (timersRef.current.length > 0) return;
+        timersRef.current.push(
+            setTimeout(() => setShake(true),  GIF_DURATION - 230),
+            setTimeout(() => setShake(false), GIF_DURATION - 230 + 300),
+            setTimeout(() => setShowGif(false), GIF_DURATION),
+        );
+    };
+
+    useEffect(() => () => {
+        timersRef.current.forEach(clearTimeout);
     }, []);
 
     const figClass = "flex flex-col items-center";
@@ -144,7 +148,7 @@ export default function meaningsPage() {
 
             {showGif && (
                 <div className="gif">
-                    <img src={`/point.gif?t=${gifTs}`} alt="" className="gifimg" />
+                    <img src={`/point.gif?t=${gifTs}`} alt="" className="gifimg" onLoad={handleGifLoad} />
                 </div>
             )}
 

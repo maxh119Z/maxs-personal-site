@@ -92,7 +92,7 @@ export default function Header() {
                 height={172}
                 className="object-cover -ml-1"
             />
-            <Link href = "https://www.reddit.com/r/calvinandhobbes/comments/8f52ej/i_colorized_my_favorite_calvin_and_hobbes_strip/" className="mt-2 text-xl">link to a favorite comic smatrip</Link>
+            <Link href = "https://www.reddit.com/r/calvinandhobbes/comments/8f52ej/i_colorized_my_favorite_calvin_and_hobbes_strip/" className="mt-2 text-xl">link to a favorite comic strip</Link>
         </div>
 
         
