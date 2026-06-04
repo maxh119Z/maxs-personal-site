@@ -93,7 +93,7 @@ export default function Header() {
                     height={172}
                     className="object-cover"
                 />
-                    <Link href = "https://neurips.cc/virtual/2025/loc/mexico-city/133196" className="mt-2 text-xl">Balcón del Zócalo (the start)</Link>
+                    <Link href = "https://neurips.cc/virtual/2025/loc/mexico-city/133196" className="mt-2 text-xl">Balcón del Zócalo</Link>
                     
                 </div>
                 <div className="h-[256] border-x-1 border-solid border-[#E5E5E5]"></div>

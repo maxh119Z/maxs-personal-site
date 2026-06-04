@@ -1,15 +1,19 @@
-"use client"; 
+"use client";
 import Image from 'next/image';
 import Link from 'next/link';
 import {useState, useEffect} from 'react';
-import { usePathname } from 'next/navigation'
 
-export default function Header({ children }: { children?: React.ReactNode } = {}) {
+const CATEGORIES = [
+    { id: "badminton",  label: "badminton" },
+    { id: "locked-fun", label: "locked + fun moments" },
+    { id: "school",     label: "school" },
+    { id: "other",      label: "other" },
+];
+
+export default function HeaderMeaning({ shake = false }: { shake?: boolean }) {
     const [isVisible, setIsVisible] = useState(false);
     const [quote, setQuote] = useState("");
     const [attribution, setAttribution] = useState("");
-    const pathname = usePathname();
-    const isHomePage = pathname === '/'
 
     const quotes = [
         "Find a friend who is so different from you, and you can’t believe how much you have in common.",
@@ -57,51 +61,24 @@ export default function Header({ children }: { children?: React.ReactNode } = {}
         const randomIndex = Math.floor(Math.random()*quotes.length);
         setQuote(quotes[randomIndex]);
         setAttribution(attributions[randomIndex]);
-
         setIsVisible(true);
     }, []);
 
     return (
-    <header className="px-5 md:px-10 py-3 flex w-full flex-col">
-        <div className="flex w-full text-2xl grow mb-4">
-            <div className="w-19/48 flex items-start">
-                <Link href="/">Max Zhang</Link>
-            </div>
-            <div className="w-29/48 flex flex items-start gap-6">
-                <Link href="/drawings">drawings</Link>
-                <Link href="/projects">projects</Link>
-                <Link href="/meaning">life</Link>
-                <Link href="/movies">movies</Link>
-            </div>
-        </div>
-        {isHomePage && (
-            <>
-                <div className="mt-4 flex flex-row w-full">
-                    <div className="w-19/48">
-                        <Image
-                            src="/selfie.jpeg"
-                            alt="Max Zhang"
-                            width={256}
-                            height={256}
-                            className="aspect-square object-cover"
-                        />
-                    </div>
-                    <div id="welcome" className="w-29/48 text-2xl">
-                        <h1 className="font-bold">Welcome!</h1>
-                        <p className="mt-2 text-base">
-                            My name is Max Zhang. I am currently a junior at Irvington High School. In my freetime, you may find me <Link className="text-[#4A90E2]" href="/drawings">drawing</Link>, watching <Link className="text-[#4A90E2]" href="/movies">movies</Link>, playing <Link className="text-[#4A90E2]" href="/meaning">badminton</Link>, or working my part-time at <Link className="text-[#4A90E2]" href="https://www.amctheatres.com/">AMC Theaters</Link> (and much more). This site is also my everything collection of technical research and personal projects, and everything else that matters. For more technical people, I am interested in multilingual AI safety research, mechanistic interpretability, and measurement science. Special thanks to my mentors thus far: <Link className="text-[#4A90E2]" href="https://ai.stanford.edu/~sttruong/">Sang Truong</Link>, <Link className="text-[#4A90E2]" href="https://nathanhu0.github.io/">Nathan Hu</Link>, and <Link className="text-[#4A90E2]" href="https://www.linkedin.com/in/haihaoliu/">Haihao Liu</Link>. Feel free to leave feedback! I spent a while learning and personally coding most of this site.
-                        </p>
-                    </div>
+        <header className="px-5 md:px-10 py-3 flex w-full flex-col">
+            <div className="flex w-full text-2xl grow mb-4">
+                <div className="w-19/48 flex items-start">
+                    <Link href="/">Max Zhang</Link>
                 </div>
-                <div className={`mt-4 w-1/3 transition-opacity duration-1000 ${isVisible ? "opacity-100" : "opacity-0"}`}>
-                    <h2 className="opacity-80">{quote}</h2>
-                    <h3 className="opacity-50"> {attribution}<button onClick={()=>window.location.reload()} className="pointer-events-auto ml-5 text-[#0064C7]">Refresh</button><Link className="ml-5 text-[#0064C7]" href="https://github.com/maxh119Z/simple-personal-quotes">your own mac widget</Link></h3>
+                <div className="w-29/48 flex items-start gap-6">
+                    <Link href="/drawings">drawings</Link>
+                    <Link href="/projects">projects</Link>
+                    <Link href="/meaning">life</Link>
+                    <Link href="/movies">movies</Link>
                 </div>
-            </>
-        )}
-        {!isHomePage && (
-            <div className="mt-4 flex flex-row w-full gap-6 items-stretch">
-                <div className="w-19/48 flex flex-col">
+            </div>
+            <div className="mt-4 flex flex-row w-full items-start">
+                <div className="w-19/48 flex flex-col gap-4">
                     <Image
                         src="/selfie.jpeg"
                         alt="Max Zhang"
@@ -109,19 +86,46 @@ export default function Header({ children }: { children?: React.ReactNode } = {}
                         height={256}
                         className="aspect-square object-cover"
                     />
-                    <div className={`mt-4 transition-opacity duration-1000 ${isVisible ? "opacity-100" : "opacity-0"}`}>
+                    <div className={`transition-opacity duration-1000 ${isVisible ? "opacity-100" : "opacity-0"}`}>
                         <h2 className="opacity-80">{quote}</h2>
                         <h3 className="opacity-50"> {attribution}<button onClick={()=>window.location.reload()} className="pointer-events-auto ml-5 text-[#0064C7]">Refresh</button><Link className="ml-5 text-[#0064C7]" href="https://github.com/maxh119Z/simple-personal-quotes">your own mac widget</Link></h3>
                     </div>
                 </div>
-                {children && (
-                    <div className="w-29/48">
-                        {children}
+                <div id="welcome" className="w-29/48 flex flex-col h-[calc(100vh-100px)]">
+                    <div className="text-2xl">
+                        <Image
+                            src="/meaningheader.png"
+                            alt="meaning header"
+                            width={338}
+                            height={171}
+                            className="object-cover -ml-1"
+                        />
+                        <p className="mt-2 text-xl">cool stickers and a macchiato</p>
                     </div>
-                )}
+                    <div className={`relative mt-auto mb-4 ml-auto mr-12 w-fit max-w-full ${shake ? "shakec" : ""}`}>
+                        <img
+                            src="/library2.jpeg"
+                            alt="peaceful landscape"
+                            className="h-[40vh] w-[67vh] max-w-full object-cover block"
+                        />
+                        <nav
+                            className="absolute inset-0 flex items-center justify-center px-8 font-serif italic"
+                            style={{ textShadow: "0 1px 6px rgba(0,0,0,0.55)" }}
+                        >
+                            <ul className="space-y-5 text-white text-center">
+                                <li className="text-sm uppercase tracking-[0.3em] not-italic opacity-80 mb-4">contents</li>
+                                {CATEGORIES.map((cat) => (
+                                    <li key={cat.id}>
+                                        <a href={`#${cat.id}`} className="text-3xl">
+                                            {cat.label}
+                                        </a>
+                                    </li>
+                                ))}
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
             </div>
-        )}
-
-    </header>
+        </header>
     );
 }

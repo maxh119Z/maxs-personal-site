@@ -238,7 +238,7 @@ export default function projectsPage(){
                                 className="w-2/3 h-auto object-cover"
                             />
                             <p className="text-base">
-                                THE bengio?
+                                Yoshua Bengio
                             </p>
                         </div>
                     </div>

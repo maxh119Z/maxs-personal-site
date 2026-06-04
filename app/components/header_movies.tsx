@@ -89,11 +89,11 @@ export default function Header() {
             <Image
                 src="/tierlist.png"
                 alt="tierlist"
-                width={683}
-                height={200}
+                width={540}
+                height={172}
                 className="object-cover -ml-1"
             />
-            <p  className="mt-2 text-xl">junior year watches (click)</p>
+            <p  className="mt-2 text-xl">junior year watches</p>
         </div>
 
         

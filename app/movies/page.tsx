@@ -1,6 +1,9 @@
+"use client"
 import Link from "next/link";
 import Header from "../components/header_movies";
 import Footer from "../components/footer";
+import { useState } from "react";
+
 
 const movies: [string, number][] = [
     ["Trust and Betrayal (all 4 episodes)", 8.9],
@@ -39,6 +42,13 @@ const movies: [string, number][] = [
 ];
 
 export default function moviesPage(){
+    const [hopinvisible, setivisible] = useState(false);
+    const [showRankings, setShowRankings] = useState(false);
+    const clickhop = () =>{
+        // e.preventDefault();
+        setivisible(true);
+
+    }
     return (
             <div className="flex flex-col flex-1 items-center justify-center text-black bg-white font-sans">
                 <Header></Header>
@@ -59,7 +69,8 @@ export default function moviesPage(){
                                 />
                             </div>
                             <div className="flex flex-col">
-                                <p>add hop in feature</p>
+                                {!hopinvisible && <a href="#title" onClick={clickhop}>hop in, click</a>}
+
                                 <img
                                 src="movies/groupphoto.png"
                                 alt="grouphoto"
@@ -83,7 +94,7 @@ export default function moviesPage(){
                             />
                             <div className="mt-7 flex flex-col">
                                 <h1 id = "title" className="text-4xl self-center ">Part-time at AMC Theaters</h1>
-                                <h2 className="text-2xl text-gray">since august 2025. ask me about it</h2>
+                                <h2 className="text-1xl text-gray">since august 2025. ask me about weird work stories</h2>
                             </div>
                             
                             <img
@@ -124,28 +135,44 @@ export default function moviesPage(){
                     <h1 className=" text-2xl mb-7 self-center ">Mostly from during Junior year. I usually watch something every week. This started because of <a className="text-[#0064C7]" href="#title">AMC</a> and surprisingly AP Lang, which made media more interesting in general. Follow my new <Link className="text-[#0064C7]" href="https://letterboxd.com/maxz119/">letterboxd.</Link></h1>
 
 
-                    <div className="mb-15 w-full flex flex-row gap-10">
-                        <table className="w-1/2 border-collapse border border-gray-300 text-left font-sans">
-                            <thead>
-                                <tr>
-                                    <th className="border border-gray-300 px-4 py-2">Movies (top = more recently watched)</th>
-                                    <th className="border border-gray-300 px-4 py-2 w-32">Rating / 10</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {movies.map(([title, rating]) => (
-                                    <tr key={title} className="hover:bg-gray-100">
-                                        <td className="border border-gray-300 px-4 py-1">{title}</td>
-                                        <td className="border border-gray-300 px-4 py-1">{rating}</td>
-                                    </tr>
-                                ))}
-                            </tbody>
-                        </table>
-                        <div className="w-1/2 flex flex-col">
-                            <p className="mb-3">Lossy metrics (Rating /10) aren't nice. Feel free to skim through braindumps I write down after watches. Some are detailed, some aren't.</p>
-                            <iframe className="flex-1" src="/pdfjs/web/viewer.html?file=/movies/life.pdf"></iframe>
+                    <div className="mb-15 w-full">
+                        <button
+                            onClick={() => setShowRankings(!showRankings)}
+                            className="text-xl text-[#0064C7] hover:opacity-70"
+                        >
+                            recent watches {showRankings ? "▲" : "▼"}
+                        </button>
+                        <div
+                            className={`
+                                mt-2 overflow-hidden transition-all duration-500 ease-in-out
+                                ${showRankings ? "opacity-100" : "max-h-0 opacity-0"}
+                            `}
+                        >
+                            <div className="w-full flex flex-row gap-10 h-[80vh]">
+                                <div className="w-1/2 overflow-y-auto">
+                                    <table className="w-full border-collapse border border-gray-300 text-left font-sans">
+                                        <thead className="sticky top-0 bg-white">
+                                            <tr>
+                                                <th className="border border-gray-300 px-4 py-2">Movies (top = more recently watched)</th>
+                                                <th className="border border-gray-300 px-4 py-2 w-32">Rating / 10</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            {movies.map(([title, rating]) => (
+                                                <tr key={title}>
+                                                    <td className="border border-gray-300 px-4 py-1">{title}</td>
+                                                    <td className="border border-gray-300 px-4 py-1">{rating}</td>
+                                                </tr>
+                                            ))}
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div className="w-1/2 flex flex-col">
+                                    <p className="mb-3">Lossy metrics (Rating /10) aren't nice. Feel free to skim through braindumps I write down after watches. Some are detailed, some aren't.</p>
+                                    <iframe className="flex-1" src="/pdfjs/web/viewer.html?file=/movies/life.pdf"></iframe>
+                                </div>
+                            </div>
                         </div>
-
                     </div>
                 </main>
                 <Footer></Footer>

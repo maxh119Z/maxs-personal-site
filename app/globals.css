@@ -17,6 +17,10 @@ html {
 #title {
   scroll-margin-top: 37.5vh;
 }
+.goon > span[id] {
+  scroll-margin-top: 200px;
+}
+
 
 
 @theme inline {
@@ -36,4 +40,35 @@ html {
 body {
   background: var(--background);
   color: var(--foreground);
+}
+
+@keyframes shakec {
+    0%   { transform: translate(0, 0); }
+    30%  { transform: translate(0, 0); }
+    40%  { transform: translate(4px, 0); }
+    70%  { transform: translate(-4px, 0); }
+    100% { transform: translate(0, 0); }
+}
+.shakec {
+    animation: shakec 0.3s ease-in-out;
+}
+
+.gif {
+    width: 65vw;
+    height: auto;
+    position: fixed;
+    z-index: 10000;
+    border: none;
+    box-shadow: none;
+    bottom: -4px;
+    left: 0;
+    pointer-events: none;
+}
+
+.gifimg {
+    border: none;
+    width: 100%;
+    box-shadow: none;
+    height: auto;
+    pointer-events: none;
 }
