@@ -13,7 +13,7 @@ export default function meaningsPage() {
     useEffect(() => {
         setGifTs(Date.now());
         setShowGif(true);
-        const hide = setTimeout(() => setShowGif(false), 2374);
+        const hide = setTimeout(() => setShowGif(false), 2274);
         const shakeOn = setTimeout(() => setShake(true), 1644);
         const shakeOff = setTimeout(() => setShake(false), 1644 + 300);
         return () => {
