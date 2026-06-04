@@ -43,8 +43,9 @@ export default function projectsPage(){
                         <div className="text-1xl flex flex-row justify-center opacity-70">Under submission at COLM</div>
                         <div className="flex flex-row justify-center gap-5">
                             <Link className="py-3 flex text-[#0064C7]" href="https://github.com/aims-foundations/safety-irt">[Github]</Link>
+                            <Link className="py-3 flex text-[#0064C7]" href="https://arxiv.org/pdf/2605.17173">[PDF]</Link>
                             <Link className="py-3 flex text-[#0064C7]" href="">[Data]</Link>
-                            <Link className="py-3 flex text-[#0064C7]" href="">[Arxiv (Coming Soon)]</Link>
+                            <Link className="py-3 flex text-[#0064C7]" href="https://arxiv.org/abs/2605.17173">[Arxiv]</Link>
                             <button
                                 onClick={() => setShowMore(!showMore)}
                                 className="py-3 text-[#0064C7] hover:opacity-70">
