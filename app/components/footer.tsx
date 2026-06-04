@@ -13,10 +13,10 @@ export default function Footer() {
 
             </div>
             <div className="w-29/48 flex flex items-start gap-6">
-                <Link href="https://github.com/maxh119Z">github</Link>
-                <Link href="https://www.linkedin.com/in/max-zhang-524b72361/">linkedin</Link>
-                <Link href="https://letterboxd.com/maxz119/">letterboxd</Link>
-                <Link href="https://www.instagram.com/maxzhang19/">instagram</Link>
+                <Link href="https://github.com/maxh119Z" target="_blank" rel="noopener noreferrer">github</Link>
+                <Link href="https://www.linkedin.com/in/max-zhang-524b72361/" target="_blank" rel="noopener noreferrer">linkedin</Link>
+                <Link href="https://letterboxd.com/maxz119/" target="_blank" rel="noopener noreferrer">letterboxd</Link>
+                <Link href="https://www.instagram.com/maxzhang19/" target="_blank" rel="noopener noreferrer">instagram</Link>
             </div>
       
         </div>

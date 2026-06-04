@@ -132,7 +132,7 @@ export default function moviesPage(){
 
                     {/* movies in genearl */}
                     <h1 className="mt-15 text-4xl mb-3 self-center ">Movies, films, and anime in general</h1>
-                    <h1 className=" text-2xl mb-7 self-center ">Mostly from during Junior year. I usually watch something every week. This started because of <a className="text-[#0064C7]" href="#title">AMC</a> and surprisingly AP Lang, which made media more interesting in general. Follow my new <Link className="text-[#0064C7]" href="https://letterboxd.com/maxz119/">letterboxd.</Link></h1>
+                    <h1 className=" text-2xl mb-7 self-center ">Mostly from during Junior year. I usually watch something every week. This started because of <a className="text-[#0064C7]" href="#title">AMC</a> and surprisingly AP Lang, which made media more interesting in general. Follow my new <Link className="text-[#0064C7]" href="https://letterboxd.com/maxz119/" target="_blank" rel="noopener noreferrer">letterboxd.</Link></h1>
 
 
                     <div className="mb-15 w-full">

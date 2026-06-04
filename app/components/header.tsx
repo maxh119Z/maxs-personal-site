@@ -89,13 +89,13 @@ export default function Header({ children }: { children?: React.ReactNode } = {}
                     <div id="welcome" className="w-29/48 text-2xl">
                         <h1 className="font-bold">Welcome!</h1>
                         <p className="mt-2 text-base">
-                            My name is Max Zhang. I am currently a junior at Irvington High School. In my freetime, you may find me <Link className="text-[#4A90E2]" href="/drawings">drawing</Link>, watching <Link className="text-[#4A90E2]" href="/movies">movies</Link>, playing <Link className="text-[#4A90E2]" href="/meaning">badminton</Link>, or working my part-time at <Link className="text-[#4A90E2]" href="https://www.amctheatres.com/">AMC Theaters</Link> (and much more). This site is also my everything collection of technical research and personal projects, and everything else that matters. For more technical people, I am interested in multilingual AI safety research, mechanistic interpretability, and measurement science. Special thanks to my mentors thus far: <Link className="text-[#4A90E2]" href="https://ai.stanford.edu/~sttruong/">Sang Truong</Link>, <Link className="text-[#4A90E2]" href="https://nathanhu0.github.io/">Nathan Hu</Link>, and <Link className="text-[#4A90E2]" href="https://www.linkedin.com/in/haihaoliu/">Haihao Liu</Link>. Feel free to leave feedback! I spent a while learning and personally coding most of this site.
+                            My name is Max Zhang. I am currently a junior at Irvington High School. In my freetime, you may find me <Link className="text-[#4A90E2]" href="/drawings">drawing</Link>, watching <Link className="text-[#4A90E2]" href="/movies">movies</Link>, playing <Link className="text-[#4A90E2]" href="/meaning">badminton</Link>, or working my part-time at <Link className="text-[#4A90E2]" href="https://www.amctheatres.com/" target="_blank" rel="noopener noreferrer">AMC Theaters</Link> (and much more). This site is also my everything collection of technical research and personal projects, and everything else that matters. For more technical people, I am interested in multilingual AI safety research, mechanistic interpretability, and measurement science. Special thanks to my mentors thus far: <Link className="text-[#4A90E2]" href="https://ai.stanford.edu/~sttruong/" target="_blank" rel="noopener noreferrer">Sang Truong</Link>, <Link className="text-[#4A90E2]" href="https://nathanhu0.github.io/" target="_blank" rel="noopener noreferrer">Nathan Hu</Link>, and <Link className="text-[#4A90E2]" href="https://www.linkedin.com/in/haihaoliu/" target="_blank" rel="noopener noreferrer">Haihao Liu</Link>. Feel free to leave feedback! I spent a while learning and personally coding most of this site.
                         </p>
                     </div>
                 </div>
                 <div className={`mt-4 w-1/3 transition-opacity duration-1000 ${isVisible ? "opacity-100" : "opacity-0"}`}>
                     <h2 className="opacity-80">{quote}</h2>
-                    <h3 className="opacity-50"> {attribution}<button onClick={()=>window.location.reload()} className="pointer-events-auto ml-5 text-[#0064C7]">Refresh</button><Link className="ml-5 text-[#0064C7]" href="https://github.com/maxh119Z/simple-personal-quotes">your own mac widget</Link></h3>
+                    <h3 className="opacity-50"> {attribution}<button onClick={()=>window.location.reload()} className="pointer-events-auto ml-5 text-[#0064C7]">Refresh</button><Link className="ml-5 text-[#0064C7]" href="https://github.com/maxh119Z/simple-personal-quotes" target="_blank" rel="noopener noreferrer">your own mac widget</Link></h3>
                 </div>
             </>
         )}
@@ -111,7 +111,7 @@ export default function Header({ children }: { children?: React.ReactNode } = {}
                     />
                     <div className={`mt-4 transition-opacity duration-1000 ${isVisible ? "opacity-100" : "opacity-0"}`}>
                         <h2 className="opacity-80">{quote}</h2>
-                        <h3 className="opacity-50"> {attribution}<button onClick={()=>window.location.reload()} className="pointer-events-auto ml-5 text-[#0064C7]">Refresh</button><Link className="ml-5 text-[#0064C7]" href="https://github.com/maxh119Z/simple-personal-quotes">your own mac widget</Link></h3>
+                        <h3 className="opacity-50"> {attribution}<button onClick={()=>window.location.reload()} className="pointer-events-auto ml-5 text-[#0064C7]">Refresh</button><Link className="ml-5 text-[#0064C7]" href="https://github.com/maxh119Z/simple-personal-quotes" target="_blank" rel="noopener noreferrer">your own mac widget</Link></h3>
                     </div>
                 </div>
                 {children && (

@@ -94,7 +94,7 @@ export default function meaningsPage() {
                         </figure>
                         <figure className={figClass}>
                             <img src="/lockedfun/5.png" alt="" className={imgClass} />
-                            <figcaption className={capClass}>post in-person presentation to <Link className="text-[#0064C7]" href="https://aimslab.stanford.edu/">AIMS</Link> lab with Ameen</figcaption>
+                            <figcaption className={capClass}>post in-person presentation to <Link className="text-[#0064C7]" href="https://aimslab.stanford.edu/" target="_blank" rel="noopener noreferrer">AIMS</Link> lab with Ameen</figcaption>
                         </figure>
                     </div>
                 </section>
@@ -124,7 +124,7 @@ export default function meaningsPage() {
                     <div className="flex flex-wrap items-end gap-6 justify-end">
                         <figure className={figClass}>
                             <img src="/others/1.png" alt="" className={imgClass} />
-                            <figcaption className={capClass}>watching <Link href="https://www.imdb.com/title/tt1190634/" className="text-[#0064C7]">The Boys</Link> finale with coworkers at midnight</figcaption>
+                            <figcaption className={capClass}>watching <Link href="https://www.imdb.com/title/tt1190634/" target="_blank" rel="noopener noreferrer" className="text-[#0064C7]">The Boys</Link> finale with coworkers at midnight</figcaption>
                         </figure>
                         <figure className={figClass}>
                             <img src="/others/2.png" alt="" className={imgClass} />

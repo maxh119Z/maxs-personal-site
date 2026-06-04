@@ -22,7 +22,7 @@ export default function projectsPage(){
 
             <main className="px-5 md:px-10 relative w-full flex-1 flex-col">
                 <h1 id = "research" className="mt-5 text-4xl">Research</h1>
-                <h1 id = "research" className="mt-1 text-lg">For less information or awards, just check my <Link className="text-[#0064C7]" href="https://www.linkedin.com/in/max-zhang-524b72361/">Linkedin.</Link></h1>
+                <h1 id = "research" className="mt-1 text-lg">For less information or awards, just check my <Link className="text-[#0064C7]" href="https://www.linkedin.com/in/max-zhang-524b72361/" target="_blank" rel="noopener noreferrer">Linkedin.</Link></h1>
                 
                 {/* paper 1 */}
                 <div className="transition-all w-full py-7 flex-1 flex flex-row flex-start items-start gap-10 justify-center">
@@ -42,10 +42,10 @@ export default function projectsPage(){
                         <div className="text-1xl flex flex-row justify-center opacity-70"><span className="text-s align-top relative -top-1">*</span>: Equal contribution, <span className="text-s align-top relative -top-1">**</span>: Equal senior authorship</div>
                         <div className="text-1xl flex flex-row justify-center opacity-70">Under submission at COLM</div>
                         <div className="flex flex-row justify-center gap-5">
-                            <Link className="py-3 flex text-[#0064C7]" href="https://github.com/aims-foundations/safety-irt">[Github]</Link>
-                            <Link className="py-3 flex text-[#0064C7]" href="https://arxiv.org/pdf/2605.17173">[PDF]</Link>
-                            <Link className="py-3 flex text-[#0064C7]" href="">[Data]</Link>
-                            <Link className="py-3 flex text-[#0064C7]" href="https://arxiv.org/abs/2605.17173">[Arxiv]</Link>
+                            <Link className="py-3 flex text-[#0064C7]" href="https://github.com/aims-foundations/safety-irt" target="_blank" rel="noopener noreferrer">[Github]</Link>
+                            <Link className="py-3 flex text-[#0064C7]" href="https://arxiv.org/pdf/2605.17173" target="_blank" rel="noopener noreferrer">[PDF]</Link>
+                            <Link className="py-3 flex text-[#0064C7]" href="https://huggingface.co/datasets/aims-foundations/safety-irt/tree/main" target="_blank" rel="noopener noreferrer">[Data]</Link>
+                            <Link className="py-3 flex text-[#0064C7]" href="https://arxiv.org/abs/2605.17173" target="_blank" rel="noopener noreferrer">[Arxiv]</Link>
                             <button
                                 onClick={() => setShowMore(!showMore)}
                                 className="py-3 text-[#0064C7] hover:opacity-70">
@@ -132,14 +132,14 @@ export default function projectsPage(){
                         <div className="flex flex-row justify-center gap-5">
                             <Link
                                 className="py-3 flex text-[#0064C7]"
-                                href="https://github.com/maxh119Z/circuit-tracer-automation"
+                                href="https://github.com/maxh119Z/circuit-tracer-automation" target="_blank" rel="noopener noreferrer"
                             >
                                 [Github]
                             </Link>
 
                             <Link
                                 className="py-3 flex text-[#0064C7]"
-                                href="https://huggingface.co/datasets/circuit-tracer-automation/pipeline_automation"
+                                href="https://huggingface.co/datasets/circuit-tracer-automation/pipeline_automation" target="_blank" rel="noopener noreferrer"
                             >
                                 [Data]
                             </Link>
@@ -218,8 +218,8 @@ export default function projectsPage(){
                             NeurIPS ResponsibleFM Workshop, <b> AACL SRW (oral)</b>
                         </div>
                         <div className="flex flex-row justify-center gap-5">
-                            <Link className="py-3 flex text-[#0064C7]" href="https://github.com/maxh119Z/rb-distillation-mulitlingual-safety">[Github]</Link>
-                            <Link className="py-3 flex text-[#0064C7]" href="https://arxiv.org/abs/2602.11157">[Arxiv]</Link>
+                            <Link className="py-3 flex text-[#0064C7]" href="https://github.com/maxh119Z/rb-distillation-mulitlingual-safety" target="_blank" rel="noopener noreferrer">[Github]</Link>
+                            <Link className="py-3 flex text-[#0064C7]" href="https://arxiv.org/abs/2602.11157" target="_blank" rel="noopener noreferrer">[Arxiv]</Link>
                             <button
                                 onClick={() => setShowMoreThird(!showMoreThird)}
                                 className="py-3 text-[#0064C7] hover:opacity-70">
@@ -294,8 +294,8 @@ export default function projectsPage(){
                             <span className="text-s align-top relative -top-1">*</span>: Equal contribution
                         </div>
                         <div className="flex flex-row justify-center gap-5">
-                            <Link className="py-3 flex text-[#0064C7]" href="https://www.researchgate.net/publication/388410885_Interactive_Web_Leveraging_AI-Driven_Code_Generation_to_Simplify_Web_Development_Algorithms_for_Novice_Programmers">[Paper]</Link>
-                            <Link className="py-3 flex text-[#0064C7]" href="https://www.youtube.com/watch?v=qdrcNg7vluk">[Video]</Link>
+                            <Link className="py-3 flex text-[#0064C7]" href="https://www.researchgate.net/publication/388410885_Interactive_Web_Leveraging_AI-Driven_Code_Generation_to_Simplify_Web_Development_Algorithms_for_Novice_Programmers" target="_blank" rel="noopener noreferrer">[Paper]</Link>
+                            <Link className="py-3 flex text-[#0064C7]" href="https://www.youtube.com/watch?v=qdrcNg7vluk" target="_blank" rel="noopener noreferrer">[Video]</Link>
                             <button
                                 onClick={() => setShowMoreFourth(!showMoreFourth)}
                                 className="py-3 text-[#0064C7] hover:opacity-70">
@@ -340,7 +340,7 @@ export default function projectsPage(){
                     >
                         <ul className="list-disc pl-8 py-4 space-y-2">
                             <li>
-                                I built BIRDIE with my badminton teammate and school friend, <Link className="text-[#0064C7]" href="https://www.linkedin.com/in/angela-ye-bb12281ab/">Angela</Link>, to help new badminton players perfect their form.
+                                I built BIRDIE with my badminton teammate and school friend, <Link className="text-[#0064C7]" href="https://www.linkedin.com/in/angela-ye-bb12281ab/" target="_blank" rel="noopener noreferrer">Angela</Link>, to help new badminton players perfect their form.
                             </li>
                             <li>
                                 Created a custom, labeled dataset of badminton players&apos; forms from our local club(s) (300-400 images).
@@ -422,7 +422,7 @@ export default function projectsPage(){
                         <p className="text-center font-semibold mt-3 flex flex-row items-center justify-center gap-2">
                             <span>
                                 1st overall at{" "}
-                                <Link className="text-[#0064C7]" href="https://bellhacks.com/">
+                                <Link className="text-[#0064C7]" href="https://bellhacks.com/" target="_blank" rel="noopener noreferrer">
                                     Bellhacks
                                 </Link>
                                 , won two PS5s
@@ -438,13 +438,13 @@ export default function projectsPage(){
                         <div className="flex flex-row justify-center gap-5 pt-2">
                             <Link
                                 className=" flex text-[#0064C7]"
-                                href="https://devpost.com/software/unify-g8sw0d"
+                                href="https://devpost.com/software/unify-g8sw0d" target="_blank" rel="noopener noreferrer"
                             >
                                 [Devpost]
                             </Link>
                             <Link
                                 className="flex text-[#0064C7]"
-                                href="https://github.com/pikull/unified-calendar"
+                                href="https://github.com/pikull/unified-calendar" target="_blank" rel="noopener noreferrer"
                             >
                                 [Github]
                             </Link>
@@ -454,7 +454,7 @@ export default function projectsPage(){
                     {/* Youth4Good */}
                     <div className="flex-1 flex flex-col items-center justify-center">
                         <Link
-                            href="https://devpost.com/software/youth4good-website"
+                            href="https://devpost.com/software/youth4good-website" target="_blank" rel="noopener noreferrer"
                             className="relative w-full h-[450px] overflow-hidden border-black/20 hover:opacity-90 transition"
                         >
                             <Image
@@ -467,7 +467,7 @@ export default function projectsPage(){
                         </Link>
                         <p className="text-center pt-3 font-semibold">
                             Winner of{" "}
-                            <Link className="text-[#0064C7]" href="https://www.instagram.com/bay_hacks/">
+                            <Link className="text-[#0064C7]" href="https://www.instagram.com/bay_hacks/" target="_blank" rel="noopener noreferrer">
                                 BayHacks
                             </Link>
                             {" "}code4cause track, 199 participants
@@ -476,7 +476,7 @@ export default function projectsPage(){
                         <div className="flex flex-row justify-center gap-5 pt-2">
                             <Link
                                 className="flex text-[#0064C7]"
-                                href="https://devpost.com/software/youth4good-website"
+                                href="https://devpost.com/software/youth4good-website" target="_blank" rel="noopener noreferrer"
                             >
                                 [Devpost]
                             </Link>
@@ -511,7 +511,7 @@ export default function projectsPage(){
                         <p className="text-center pt-3 font-semibold flex flex-row items-center justify-center gap-2">
                             <span>
                                 Runner-up at{" "}
-                                <Link className="text-[#0064C7]" href="https://www.vikinghacks.com/">
+                                <Link className="text-[#0064C7]" href="https://www.vikinghacks.com/" target="_blank" rel="noopener noreferrer">
                                     VikingHacks
                                 </Link>
                                 , Future of Entertainment
@@ -527,7 +527,7 @@ export default function projectsPage(){
                         <div className="flex flex-row justify-center gap-5 pt-2">
                             <Link
                                 className=" flex text-[#0064C7]"
-                                href="https://devpost.com/software/game-sword"
+                                href="https://devpost.com/software/game-sword" target="_blank" rel="noopener noreferrer"
                             >
                                 [Devpost]
                             </Link>
