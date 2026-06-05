@@ -126,7 +126,7 @@ export default function meaningsPage() {
                         <figure className={figClass}>
                             <iframe
                                 src="/pdfjs/web/viewer.html?file=/essay.pdf#zoom=page-width"
-                                className="h-80 w-[500px] block shadow-sm"
+                                className="h-80 w-[500px] max-w-full block shadow-sm max-md:h-auto max-md:aspect-[1/1.4]"
                             />
                             <figcaption className={capClass}>lang exemplar and good worldview.</figcaption>
                         </figure>

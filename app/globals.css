@@ -19,7 +19,7 @@ html {
 }
 @media (max-width: 767px) {
   #title {
-    scroll-margin-top: 10vh;
+    scroll-margin-top: 40vh;
   }
 }
 .goon > span[id] {

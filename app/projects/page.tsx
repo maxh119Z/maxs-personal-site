@@ -40,7 +40,7 @@ export default function projectsPage(){
                         <h2 className="text-1xl py-3 max-md:hidden">Research Paper</h2>
                         <div className="w-full aspect-[1200/1300]">
                             <iframe
-                                src="/pdfjs/web/viewer.html?file=https://arxiv.org/pdf/2605.17173#zoom=page-width"
+                                src="https://docs.google.com/viewer?url=https://arxiv.org/pdf/2605.17173&embedded=true"
                                 className="w-full h-full"
                                 allow="autoplay"
                             />
@@ -207,7 +207,7 @@ export default function projectsPage(){
                         <h2 className="text-1xl py-3 max-md:hidden">Research Paper</h2>
                         <div className="w-full aspect-[1200/1300]">
                             <iframe
-                                src="/pdfjs/web/viewer.html?file=https://arxiv.org/pdf/2602.11157#zoom=page-width"
+                                src="https://docs.google.com/viewer?url=https://arxiv.org/pdf/2602.11157&embedded=true"
                                 className="w-full h-full"
                                 allow="autoplay"
                             />
@@ -324,7 +324,7 @@ export default function projectsPage(){
                         <h2 className="text-1xl py-3 max-md:hidden">Research Paper</h2>
                         <div className="w-full aspect-[1200/1300]">
                             <iframe
-                                src="https://aircconline.com/csit/papers/vol15/csit150107.pdf"
+                                src="https://docs.google.com/viewer?url=https://aircconline.com/csit/papers/vol15/csit150107.pdf&embedded=true"
                                 className="w-full h-full"
                                 allow="autoplay"
                             />
