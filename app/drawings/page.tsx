@@ -46,7 +46,7 @@ export default function drawingsPage(){
             <section className=" flex min-h-screen w-full flex-col">
                 <Header></Header>
                 <main className="relative w-full flex-1 px-5">
-             <div className="absolute bottom-0 left-10 right-10 flex items-end gap-0 max-md:relative max-md:left-0 max-md:right-0 max-md:bottom-auto max-md:mt-8 max-md:px-2 max-md:flex-wrap max-md:gap-2">
+             <div className="absolute bottom-0 left-10 right-10 flex items-end gap-0 max-md:relative max-md:left-0 max-md:right-0 max-md:bottom-auto max-md:mt-8 max-md:px-2">
             <a href="#people" className="aspect-5/3 w-[25%] text-center overflow-hidden">
                 <img
                 src="drawing/eye_good.jpg"
@@ -112,21 +112,21 @@ export default function drawingsPage(){
 
                     </h2>
                     <div className="flex-1 flex flex-wrap items-end gap-3 max-md:gap-4">
-                        <GalleryImg src="drawing/art_1.png" alt="art 1" className="h-60 w-auto object-contain max-md:h-auto max-md:w-full" />
-                        <GalleryImg src="drawing/art_yosemite.png" alt="yosemite" className="h-52 w-auto object-contain max-md:h-auto max-md:w-full" />
-                        <GalleryImg src="drawing/art_2.png" alt="art 2" className="h-64 w-auto object-contain max-md:h-auto max-md:w-full" />
-                        <GalleryImg src="drawing/long_good.jpg" alt="long good" className="h-48 w-auto object-contain max-md:h-auto max-md:w-full" />
+                        <GalleryImg src="drawing/art_1.png" alt="art 1" className="h-60 w-auto object-contain max-md:h-40" />
+                        <GalleryImg src="drawing/art_yosemite.png" alt="yosemite" className="h-52 w-auto object-contain max-md:h-40" />
+                        <GalleryImg src="drawing/art_2.png" alt="art 2" className="h-64 w-auto object-contain max-md:h-40" />
+                        <GalleryImg src="drawing/long_good.jpg" alt="long good" className="h-48 w-auto object-contain max-md:h-40" />
 
                     </div>
                 </div>
 
                 <div id = "people" className="scroll-mt-[15vh] flex items-center gap-8 max-md:flex-col-reverse max-md:items-stretch max-md:gap-4">
                     <div className="flex-1 flex flex-wrap items-end gap-3 max-md:gap-4">
-                        <GalleryImg src="drawing/people_overview.png" alt="people overview" className="h-52 w-auto object-contain max-md:h-auto max-md:w-full" />
-                        <GalleryImg src="drawing/people.png" alt="people" className="h-64 w-auto object-contain max-md:h-auto max-md:w-full" />
-                        <GalleryImg src="drawing/npeople.jpg" alt="npeople" className="h-56 w-auto object-contain max-md:h-auto max-md:w-full" />
-                        <GalleryImg src="drawing/person2.jpg" alt="person 2" className="h-60 w-auto object-contain max-md:h-auto max-md:w-full" />
-                        <GalleryImg src="drawing/eye_good.jpg" alt="eye good" className="h-56 w-auto object-contain max-md:h-auto max-md:w-full" />
+                        <GalleryImg src="drawing/people_overview.png" alt="people overview" className="h-52 w-auto object-contain max-md:h-40" />
+                        <GalleryImg src="drawing/people.png" alt="people" className="h-64 w-auto object-contain max-md:h-40" />
+                        <GalleryImg src="drawing/npeople.jpg" alt="npeople" className="h-56 w-auto object-contain max-md:h-40" />
+                        <GalleryImg src="drawing/person2.jpg" alt="person 2" className="h-60 w-auto object-contain max-md:h-40" />
+                        <GalleryImg src="drawing/eye_good.jpg" alt="eye good" className="h-56 w-auto object-contain max-md:h-40" />
                     </div>
                     <h2 className="text-4xl font-light w-1/6 flex-col flex shrink-0 max-md:w-full max-md:flex-row max-md:flex-wrap max-md:gap-4">
                         <a href="#artwork" className="opacity-[0.5] !text-2xl">artwork</a>
@@ -146,20 +146,20 @@ export default function drawingsPage(){
 
                     </h2>
                     <div className="flex-1 flex flex-wrap items-end gap-3 max-md:gap-4">
-                        <GalleryImg src="drawing/other.png" alt="other" className="h-64 w-auto object-contain max-md:h-auto max-md:w-full" />
-                        <GalleryImg src="drawing/other1.jpg" alt="other 1" className="h-52 w-auto object-contain max-md:h-auto max-md:w-full" />
-                        <GalleryImg src="drawing/other2.jpg" alt="other 2" className="h-60 w-auto object-contain max-md:h-auto max-md:w-full" />
-                        <GalleryImg src="drawing/other3.jpg" alt="other 3" className="h-56 w-auto object-contain max-md:h-auto max-md:w-full" />
+                        <GalleryImg src="drawing/other.png" alt="other" className="h-64 w-auto object-contain max-md:h-40" />
+                        <GalleryImg src="drawing/other1.jpg" alt="other 1" className="h-52 w-auto object-contain max-md:h-40" />
+                        <GalleryImg src="drawing/other2.jpg" alt="other 2" className="h-60 w-auto object-contain max-md:h-40" />
+                        <GalleryImg src="drawing/other3.jpg" alt="other 3" className="h-56 w-auto object-contain max-md:h-40" />
                     </div>
                 </div>
 
                 <div id = "ipad" className="scroll-mt-[15vh] flex text-center align-center items-center gap-8 max-md:flex-col-reverse max-md:items-stretch max-md:gap-4">
                     <div className="flex-1 flex flex-wrap items-end gap-3 max-md:gap-4">
-                        <GalleryImg src="drawing/ipad2.png" alt="ipad 2" className="h-56 w-auto object-contain max-md:h-auto max-md:w-full" />
-                        <GalleryImg src="drawing/ipad_weekend.png" alt="ipad weekend" className="h-48 w-auto object-contain max-md:h-auto max-md:w-full" />
-                        <GalleryImg src="drawing/ipad1.jpg" alt="ipad 1" className="h-64 w-auto object-contain max-md:h-auto max-md:w-full" />
-                        <GalleryImg src="drawing/ipad3.jpg" alt="ipad 3" className="h-60 w-auto object-contain max-md:h-auto max-md:w-full" />
-                        <GalleryImg src="drawing/faces.png" alt="faces" className="h-52 w-auto object-contain max-md:h-auto max-md:w-full" />
+                        <GalleryImg src="drawing/ipad2.png" alt="ipad 2" className="h-56 w-auto object-contain max-md:h-40" />
+                        <GalleryImg src="drawing/ipad_weekend.png" alt="ipad weekend" className="h-48 w-auto object-contain max-md:h-40" />
+                        <GalleryImg src="drawing/ipad1.jpg" alt="ipad 1" className="h-64 w-auto object-contain max-md:h-40" />
+                        <GalleryImg src="drawing/ipad3.jpg" alt="ipad 3" className="h-60 w-auto object-contain max-md:h-40" />
+                        <GalleryImg src="drawing/faces.png" alt="faces" className="h-52 w-auto object-contain max-md:h-40" />
                     </div>
                     <h2 className="text-4xl font-light w-1/6 flex-col flex shrink-0 max-md:w-full max-md:flex-row max-md:flex-wrap max-md:gap-4">
                         <a href="#artwork"  className="opacity-[0.5] !text-2xl">artwork</a>

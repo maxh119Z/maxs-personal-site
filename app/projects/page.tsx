@@ -34,26 +34,28 @@ export default function projectsPage(){
                 
                 {/* paper 1 */}
                 <div className="transition-all w-full py-7 flex-1 flex flex-row flex-start items-start gap-10 justify-center max-md:flex-col max-md:items-stretch max-md:gap-6">
-                    <div className="relative w-[29.166%] max-md:!w-full text-center flex flex-col">
-                        <h2 className="text-1xl py-3">Research Paper</h2>
+                    {/* mobile-only title above iframe */}
+                    <h2 className="hidden max-md:block max-md:order-1 text-1xl py-3 font-black text-center">Why Do Safety Guardrails Degrade Across Languages?</h2>
+                    <div className="relative w-[29.166%] max-md:!w-full max-md:order-2 text-center flex flex-col">
+                        <h2 className="text-1xl py-3 max-md:hidden">Research Paper</h2>
                         <div className="w-full aspect-[1200/1300]">
                             <iframe
-                                src="https://drive.google.com/file/d/1KIp_imdvIKYr7ryc2ElR_8IHjrTnJwdF/preview"
+                                src="/pdfjs/web/viewer.html?file=https://arxiv.org/pdf/2605.17173#zoom=page-width"
                                 className="w-full h-full"
                                 allow="autoplay"
                             />
                         </div>
                     </div>
-                    <div className="transition-all relative w-[37.5%] max-md:!w-full text-center flex flex-col">
-                        <h2 className="text-1xl py-3 flex justify-center font-black">Why Do Safety Guardrails Degrade Across Languages?</h2>
-                        <div className="text-1xl flex flex-row justify-center opacity-70"><p className="font-semibold">Max Zhang<span className="text-s align-top relative -top-1">*</span></p>, Ameen Patel<span className="text-s align-top relative -top-1">*</span>, Sang Truong<span className="text-s align-top relative -top-1">**</span>, Sanmi Koyejo<span className="text-s align-top relative -top-1">**</span></div>
-                        <div className="text-1xl flex flex-row justify-center opacity-70"><span className="text-s align-top relative -top-1">*</span>: Equal contribution, <span className="text-s align-top relative -top-1">**</span>: Equal senior authorship</div>
+                    <div className="transition-all relative w-[37.5%] max-md:!w-full max-md:order-3 text-center flex flex-col">
+                        <h2 className="text-1xl py-3 flex justify-center font-black max-md:hidden">Why Do Safety Guardrails Degrade Across Languages?</h2>
+                        <div className="text-1xl flex flex-row justify-center opacity-70 flex-wrap"><p className="font-semibold">Max Zhang<span className="text-s align-top relative -top-1">*</span></p>, Ameen Patel<span className="text-s align-top relative -top-1">*</span>, Sang Truong<span className="text-s align-top relative -top-1">**</span>, Sanmi Koyejo<span className="text-s align-top relative -top-1">**</span></div>
+                        <div className="text-1xl flex flex-row justify-center opacity-70 flex-wrap"><span className="text-s align-top relative -top-1">*</span>: Equal contribution, <span className="text-s align-top relative -top-1">**</span>: Equal senior authorship</div>
                         <div className="text-1xl flex flex-row justify-center opacity-70">Under submission at COLM</div>
-                        <div className="flex flex-row justify-center gap-5">
-                            <Link className="py-3 flex text-[#0064C7]" href="https://github.com/aims-foundations/safety-irt" target="_blank" rel="noopener noreferrer">[Github]</Link>
-                            <Link className="py-3 flex text-[#0064C7]" href="https://arxiv.org/pdf/2605.17173" target="_blank" rel="noopener noreferrer">[PDF]</Link>
-                            <Link className="py-3 flex text-[#0064C7]" href="https://huggingface.co/datasets/aims-foundations/safety-irt/tree/main" target="_blank" rel="noopener noreferrer">[Data]</Link>
-                            <Link className="py-3 flex text-[#0064C7]" href="https://arxiv.org/abs/2605.17173" target="_blank" rel="noopener noreferrer">[Arxiv]</Link>
+                        <div className="flex flex-row justify-center gap-5 flex-wrap">
+                            <Link className={`py-3 flex text-[#0064C7] ${!showMore ? 'max-md:hidden' : ''}`} href="https://github.com/aims-foundations/safety-irt" target="_blank" rel="noopener noreferrer">[Github]</Link>
+                            <Link className={`py-3 flex text-[#0064C7] ${!showMore ? 'max-md:hidden' : ''}`} href="https://arxiv.org/pdf/2605.17173" target="_blank" rel="noopener noreferrer">[PDF]</Link>
+                            <Link className={`py-3 flex text-[#0064C7] ${!showMore ? 'max-md:hidden' : ''}`} href="https://huggingface.co/datasets/aims-foundations/safety-irt/tree/main" target="_blank" rel="noopener noreferrer">[Data]</Link>
+                            <Link className={`py-3 flex text-[#0064C7] ${!showMore ? 'max-md:hidden' : ''}`} href="https://arxiv.org/abs/2605.17173" target="_blank" rel="noopener noreferrer">[Arxiv]</Link>
                             <button
                                 onClick={() => setShowMore(!showMore)}
                                 className="py-3 text-[#0064C7] hover:opacity-70">
@@ -79,7 +81,7 @@ export default function projectsPage(){
                         </div>
                     </div>
                     <div
-                        className="relative text-center flex flex-col overflow-hidden transition-all duration-500 ease-in-out max-md:!w-full"
+                        className={`relative text-center flex flex-col overflow-hidden transition-all duration-500 ease-in-out max-md:order-4 ${showMore ? 'max-md:!w-full' : 'max-md:!hidden'}`}
                         style={{
                             width: showMore ? "29.166%" : "0px",
                             pointerEvents: showMore ? "auto" : "none",
@@ -98,8 +100,10 @@ export default function projectsPage(){
 
                 {/* paper 2 */}
                 <div className="transition-all w-full py-7 flex-1 flex flex-row flex-start items-start gap-10 justify-center max-md:flex-col max-md:items-stretch max-md:gap-6">
+                    {/* mobile-only title above iframe */}
+                    <h2 className="hidden max-md:block max-md:order-1 text-1xl py-3 font-black text-center">LLMs can Annotate Attribution Graphs</h2>
                     <div
-                        className="relative text-center flex flex-col overflow-hidden transition-all duration-500 ease-in-out max-md:!w-full"
+                        className={`relative text-center flex flex-col overflow-hidden transition-all duration-500 ease-in-out max-md:order-4 ${showMoreSecond ? 'max-md:!w-full' : 'max-md:!hidden'}`}
                         style={{
                             width: showMoreSecond ? "29.166%" : "0px",
                             pointerEvents: showMoreSecond ? "auto" : "none",
@@ -114,12 +118,12 @@ export default function projectsPage(){
                         </div>
                     </div>
 
-                    <div className="transition-all relative w-[37.5%] max-md:!w-full text-center flex flex-col">
-                        <h2 className="text-1xl py-3 flex justify-center font-black">
+                    <div className="transition-all relative w-[37.5%] max-md:!w-full max-md:order-3 text-center flex flex-col">
+                        <h2 className="text-1xl py-3 flex justify-center font-black max-md:hidden">
                             LLMs can Annotate Attribution Graphs
                         </h2>
 
-                        <div className="text-1xl flex flex-row justify-center opacity-70">
+                        <div className="text-1xl flex flex-row justify-center opacity-70 flex-wrap">
                             <p className="font-semibold">
                                 Ameen Patel
                                 <span className="text-s align-top relative -top-1">*</span>
@@ -129,7 +133,7 @@ export default function projectsPage(){
                             , Nathan Hu.
                         </div>
 
-                        <div className="text-1xl flex flex-row justify-center opacity-70">
+                        <div className="text-1xl flex flex-row justify-center opacity-70 flex-wrap">
                             <span className="text-s align-top relative -top-1">*</span>: Equal contribution
                         </div>
 
@@ -137,22 +141,22 @@ export default function projectsPage(){
                             Under review at ICML Mech Interp
                         </div>
 
-                        <div className="flex flex-row justify-center gap-5">
+                        <div className="flex flex-row justify-center gap-5 flex-wrap">
                             <Link
-                                className="py-3 flex text-[#0064C7]"
+                                className={`py-3 flex text-[#0064C7] ${!showMoreSecond ? 'max-md:hidden' : ''}`}
                                 href="https://github.com/maxh119Z/circuit-tracer-automation" target="_blank" rel="noopener noreferrer"
                             >
                                 [Github]
                             </Link>
 
                             <Link
-                                className="py-3 flex text-[#0064C7]"
+                                className={`py-3 flex text-[#0064C7] ${!showMoreSecond ? 'max-md:hidden' : ''}`}
                                 href="https://huggingface.co/datasets/circuit-tracer-automation/pipeline_automation" target="_blank" rel="noopener noreferrer"
                             >
                                 [Data]
                             </Link>
 
-                            <Link className="py-3 flex text-[#0064C7]" href="">
+                            <Link className={`py-3 flex text-[#0064C7] ${!showMoreSecond ? 'max-md:hidden' : ''}`} href="">
                                 [Arxiv Coming Soon]
                             </Link>
 
@@ -183,8 +187,8 @@ export default function projectsPage(){
                             </div>
                     </div>
 
-                    <div className="relative w-[29.166%] max-md:!w-full text-center flex flex-col">
-                        <h2 className="text-1xl py-3">Research Paper</h2>
+                    <div className="relative w-[29.166%] max-md:!w-full max-md:order-2 text-center flex flex-col">
+                        <h2 className="text-1xl py-3 max-md:hidden">Research Paper</h2>
                         <div className="w-full aspect-[1200/1300]">
                             <iframe
                                 src="https://drive.google.com/file/d/1rHLelFHrT7SnYm3PymH75EVKIPIvBo7N/preview"
@@ -197,22 +201,24 @@ export default function projectsPage(){
 
                 {/* paper 3 */}
                 <div className="transition-all w-full py-7 flex-1 flex flex-row flex-start items-start gap-10 justify-center max-md:flex-col max-md:items-stretch max-md:gap-6">
-                    <div className="relative w-[29.166%] max-md:!w-full text-center flex flex-col">
-                        <h2 className="text-1xl py-3">Research Paper</h2>
+                    {/* mobile-only title above iframe */}
+                    <h2 className="hidden max-md:block max-md:order-1 text-1xl py-3 font-black text-center">Response-Based Knowledge Distillation for Multilingual Jailbreak Prevention Unwittingly Compromises Safety</h2>
+                    <div className="relative w-[29.166%] max-md:!w-full max-md:order-2 text-center flex flex-col">
+                        <h2 className="text-1xl py-3 max-md:hidden">Research Paper</h2>
                         <div className="w-full aspect-[1200/1300]">
                             <iframe
-                                src="https://arxiv.org/pdf/2602.11157"
+                                src="/pdfjs/web/viewer.html?file=https://arxiv.org/pdf/2602.11157#zoom=page-width"
                                 className="w-full h-full"
                                 allow="autoplay"
                             />
                         </div>
                     </div>
 
-                    <div className="relative w-[37.5%] max-md:!w-full text-center flex flex-col">
-                        <h2 className="text-1xl py-3 flex justify-center font-black">
+                    <div className="relative w-[37.5%] max-md:!w-full max-md:order-3 text-center flex flex-col">
+                        <h2 className="text-1xl py-3 flex justify-center font-black max-md:hidden">
                             Response-Based Knowledge Distillation for Multilingual Jailbreak Prevention Unwittingly Compromises Safety
                         </h2>
-                        <div className="text-1xl flex flex-row justify-center opacity-70">
+                        <div className="text-1xl flex flex-row justify-center opacity-70 flex-wrap">
                             <p className="font-semibold">
                                 Max Zhang
                                 <span className="text-s align-top relative -top-1">*</span>
@@ -225,9 +231,9 @@ export default function projectsPage(){
                         <div className="text-1xl flex flex-row justify-center opacity-70">
                             NeurIPS ResponsibleFM Workshop, <b> AACL SRW (oral)</b>
                         </div>
-                        <div className="flex flex-row justify-center gap-5">
-                            <Link className="py-3 flex text-[#0064C7]" href="https://github.com/maxh119Z/rb-distillation-mulitlingual-safety" target="_blank" rel="noopener noreferrer">[Github]</Link>
-                            <Link className="py-3 flex text-[#0064C7]" href="https://arxiv.org/abs/2602.11157" target="_blank" rel="noopener noreferrer">[Arxiv]</Link>
+                        <div className="flex flex-row justify-center gap-5 flex-wrap">
+                            <Link className={`py-3 flex text-[#0064C7] ${!showMoreThird ? 'max-md:hidden' : ''}`} href="https://github.com/maxh119Z/rb-distillation-mulitlingual-safety" target="_blank" rel="noopener noreferrer">[Github]</Link>
+                            <Link className={`py-3 flex text-[#0064C7] ${!showMoreThird ? 'max-md:hidden' : ''}`} href="https://arxiv.org/abs/2602.11157" target="_blank" rel="noopener noreferrer">[Arxiv]</Link>
                             <button
                                 onClick={() => setShowMoreThird(!showMoreThird)}
                                 className="py-3 text-[#0064C7] hover:opacity-70">
@@ -253,7 +259,7 @@ export default function projectsPage(){
                     </div>
 
                     <div
-                        className="relative text-center flex flex-col overflow-hidden transition-all duration-500 ease-in-out max-md:!w-full"
+                        className={`relative text-center flex flex-col overflow-hidden transition-all duration-500 ease-in-out max-md:order-4 ${showMoreThird ? 'max-md:!w-full' : 'max-md:!hidden'}`}
                         style={{
                             width: showMoreThird ? "29.166%" : "0px",
                             pointerEvents: showMoreThird ? "auto" : "none",
@@ -272,8 +278,10 @@ export default function projectsPage(){
 
                 {/* paper 4 */}
                 <div className="transition-all w-full py-7 flex-1 flex flex-row flex-start items-start gap-10 justify-center max-md:flex-col max-md:items-stretch max-md:gap-6">
+                    {/* mobile-only title above iframe */}
+                    <h2 className="hidden max-md:block max-md:order-1 text-1xl py-3 font-black text-center">Interactive Web: Leveraging AI-Driven Code Generation to Simplify Web Development Algorithms for Novice Programmers</h2>
                     <div
-                        className="relative text-center flex flex-col overflow-hidden transition-all duration-500 ease-in-out max-md:!w-full"
+                        className={`relative text-center flex flex-col overflow-hidden transition-all duration-500 ease-in-out max-md:order-4 ${showMoreFourth ? 'max-md:!w-full' : 'max-md:!hidden'}`}
                         style={{
                             width: showMoreFourth ? "29.166%" : "0px",
                             pointerEvents: showMoreFourth ? "auto" : "none",
@@ -289,21 +297,21 @@ export default function projectsPage(){
                         </div>
                     </div>
 
-                    <div className="relative w-[37.5%] max-md:!w-full text-center flex flex-col">
-                        <h2 className="text-1xl py-3 flex justify-center font-black">
+                    <div className="relative w-[37.5%] max-md:!w-full max-md:order-3 text-center flex flex-col">
+                        <h2 className="text-1xl py-3 flex justify-center font-black max-md:hidden">
                             Interactive Web: Leveraging AI-Driven Code Generation to Simplify Web Development Algorithms for Novice Programmers
                         </h2>
-                        <div className="text-1xl flex flex-row justify-center opacity-70">
+                        <div className="text-1xl flex flex-row justify-center opacity-70 flex-wrap">
                             Kai Zhang, Vyom Kumar
                             <span className="text-s align-top relative -top-1">*</span>
                             , <p className="font-semibold">Max Zhang<span className="text-s align-top relative -top-1">*</span></p>
                         </div>
-                        <div className="text-1xl flex flex-row justify-center opacity-70">
+                        <div className="text-1xl flex flex-row justify-center opacity-70 flex-wrap">
                             <span className="text-s align-top relative -top-1">*</span>: Equal contribution
                         </div>
-                        <div className="flex flex-row justify-center gap-5">
-                            <Link className="py-3 flex text-[#0064C7]" href="https://www.researchgate.net/publication/388410885_Interactive_Web_Leveraging_AI-Driven_Code_Generation_to_Simplify_Web_Development_Algorithms_for_Novice_Programmers" target="_blank" rel="noopener noreferrer">[Paper]</Link>
-                            <Link className="py-3 flex text-[#0064C7]" href="https://www.youtube.com/watch?v=qdrcNg7vluk" target="_blank" rel="noopener noreferrer">[Video]</Link>
+                        <div className="flex flex-row justify-center gap-5 flex-wrap">
+                            <Link className={`py-3 flex text-[#0064C7] ${!showMoreFourth ? 'max-md:hidden' : ''}`} href="https://www.researchgate.net/publication/388410885_Interactive_Web_Leveraging_AI-Driven_Code_Generation_to_Simplify_Web_Development_Algorithms_for_Novice_Programmers" target="_blank" rel="noopener noreferrer">[Paper]</Link>
+                            <Link className={`py-3 flex text-[#0064C7] ${!showMoreFourth ? 'max-md:hidden' : ''}`} href="https://www.youtube.com/watch?v=qdrcNg7vluk" target="_blank" rel="noopener noreferrer">[Video]</Link>
                             <button
                                 onClick={() => setShowMoreFourth(!showMoreFourth)}
                                 className="py-3 text-[#0064C7] hover:opacity-70">
@@ -312,8 +320,8 @@ export default function projectsPage(){
                         </div>
                     </div>
 
-                    <div className="relative w-[29.166%] max-md:!w-full text-center flex flex-col">
-                        <h2 className="text-1xl py-3">Research Paper</h2>
+                    <div className="relative w-[29.166%] max-md:!w-full max-md:order-2 text-center flex flex-col">
+                        <h2 className="text-1xl py-3 max-md:hidden">Research Paper</h2>
                         <div className="w-full aspect-[1200/1300]">
                             <iframe
                                 src="https://aircconline.com/csit/papers/vol15/csit150107.pdf"

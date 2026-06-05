@@ -8,8 +8,8 @@ export default function Home() {
     <div className="flex flex-col flex-1 items-center text-black bg-white font-sans">
       <Header />
       <main className="w-full px-5 md:px-10 py-12">
-        <div className="grid w-full grid-cols-2 gap-8 items-start max-md:flex max-md:flex-col max-md:w-2/3 max-md:mx-auto max-md:gap-10">
-          <Link href="/drawings" className="block w-full self-start max-md:self-start">
+        <div className="grid w-full grid-cols-2 gap-8 items-start max-md:flex max-md:flex-col max-md:w-full max-md:gap-10">
+          <Link href="/drawings" className="block w-full self-start max-md:w-[85%] max-md:self-start">
             <Image
               src="/drawing/long.png"
               alt="drawings flowers"
@@ -20,7 +20,7 @@ export default function Home() {
             <p className="mt-2 text-xl">arts and drawing</p>
           </Link>
 
-          <Link href="/meaning" className="block w-full self-start max-md:self-end max-md:text-right">
+          <Link href="/meaning" className="block w-full self-start max-md:w-[85%] max-md:self-end max-md:text-right">
             <Image
               src="/meaning.png"
               alt="meaning"
@@ -31,7 +31,7 @@ export default function Home() {
             <p className="mt-2 text-xl">life and meaning</p>
           </Link>
 
-          <Link href="/movies" className="block w-full self-start max-md:self-start">
+          <Link href="/movies" className="block w-full self-start max-md:w-[85%] max-md:self-start">
             <Image
               src="/movies.jpeg"
               alt="movies"
@@ -42,7 +42,7 @@ export default function Home() {
             <p className="mt-2 text-xl">watching movies</p>
           </Link>
 
-          <Link href="/projects" className="block w-full self-start max-md:self-end max-md:text-right">
+          <Link href="/projects" className="block w-full self-start max-md:w-[85%] max-md:self-end max-md:text-right">
             <div className="relative w-2/3 aspect-[1200/1300] max-md:w-full max-md:ml-auto">
               <iframe
                 src="https://drive.google.com/file/d/1KIp_imdvIKYr7ryc2ElR_8IHjrTnJwdF/preview"

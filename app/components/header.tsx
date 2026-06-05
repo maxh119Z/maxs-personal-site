@@ -95,7 +95,7 @@ export default function Header({ children }: { children?: React.ReactNode } = {}
                         </p>
                     </div>
                 </div>
-                <div className={`mt-4 w-1/3 transition-opacity duration-1000 max-md:w-2/3 max-md:mx-auto max-md:text-center ${isVisible ? "opacity-100" : "opacity-0"}`}>
+                <div className={`mt-4 w-1/3 transition-opacity duration-1000 max-md:mt-8 max-md:mb-6 max-md:w-2/3 max-md:mx-auto max-md:text-center ${isVisible ? "opacity-100" : "opacity-0"}`}>
                     <h2 className="opacity-80">{quote}</h2>
                     <h3 className="opacity-50"> {attribution}<button onClick={()=>window.location.reload()} className="pointer-events-auto ml-5 text-[#0064C7]">Refresh</button><Link className="ml-5 text-[#0064C7]" href="https://github.com/maxh119Z/simple-personal-quotes" target="_blank" rel="noopener noreferrer">your own mac widget</Link></h3>
                 </div>
@@ -111,7 +111,7 @@ export default function Header({ children }: { children?: React.ReactNode } = {}
                         height={256}
                         className="aspect-square object-cover"
                     />
-                    <div className={`mt-4 transition-opacity duration-1000 max-md:text-center ${isVisible ? "opacity-100" : "opacity-0"}`}>
+                    <div className={`mt-4 transition-opacity duration-1000 max-md:mt-8 max-md:mb-6 max-md:text-center ${isVisible ? "opacity-100" : "opacity-0"}`}>
                         <h2 className="opacity-80">{quote}</h2>
                         <h3 className="opacity-50"> {attribution}<button onClick={()=>window.location.reload()} className="pointer-events-auto ml-5 text-[#0064C7]">Refresh</button><Link className="ml-5 text-[#0064C7]" href="https://github.com/maxh119Z/simple-personal-quotes" target="_blank" rel="noopener noreferrer">your own mac widget</Link></h3>
                     </div>
