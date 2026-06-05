@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import Header from "../components/header_projects";
 import Footer from "../components/footer"
@@ -16,6 +16,14 @@ export default function projectsPage(){
     const [showUnifyImage, setShowUnifyImage] = useState(false);
     const [showGameSwordImage, setShowGameSwordImage] = useState(false);
 
+    // On mobile, default all the expanded panels to collapsed.
+    useEffect(() => {
+        if (typeof window !== 'undefined' && window.matchMedia('(max-width: 767px)').matches) {
+            setShowMore(false);
+            setShowMoreSecond(false);
+        }
+    }, []);
+
     return (
         <div className="flex flex-col flex-1 items-center justify-center text-black bg-white font-sans">
             <Header/>
@@ -25,8 +33,8 @@ export default function projectsPage(){
                 <h1 id = "research" className="mt-1 text-lg">For less information or awards, just check my <Link className="text-[#0064C7]" href="https://www.linkedin.com/in/max-zhang-524b72361/" target="_blank" rel="noopener noreferrer">Linkedin.</Link></h1>
                 
                 {/* paper 1 */}
-                <div className="transition-all w-full py-7 flex-1 flex flex-row flex-start items-start gap-10 justify-center">
-                    <div className="relative w-[29.166%] text-center flex flex-col">
+                <div className="transition-all w-full py-7 flex-1 flex flex-row flex-start items-start gap-10 justify-center max-md:flex-col max-md:items-stretch max-md:gap-6">
+                    <div className="relative w-[29.166%] max-md:!w-full text-center flex flex-col">
                         <h2 className="text-1xl py-3">Research Paper</h2>
                         <div className="w-full aspect-[1200/1300]">
                             <iframe
@@ -36,7 +44,7 @@ export default function projectsPage(){
                             />
                         </div>
                     </div>
-                    <div className="transition-all relative w-[37.5%] text-center flex flex-col">
+                    <div className="transition-all relative w-[37.5%] max-md:!w-full text-center flex flex-col">
                         <h2 className="text-1xl py-3 flex justify-center font-black">Why Do Safety Guardrails Degrade Across Languages?</h2>
                         <div className="text-1xl flex flex-row justify-center opacity-70"><p className="font-semibold">Max Zhang<span className="text-s align-top relative -top-1">*</span></p>, Ameen Patel<span className="text-s align-top relative -top-1">*</span>, Sang Truong<span className="text-s align-top relative -top-1">**</span>, Sanmi Koyejo<span className="text-s align-top relative -top-1">**</span></div>
                         <div className="text-1xl flex flex-row justify-center opacity-70"><span className="text-s align-top relative -top-1">*</span>: Equal contribution, <span className="text-s align-top relative -top-1">**</span>: Equal senior authorship</div>
@@ -71,7 +79,7 @@ export default function projectsPage(){
                         </div>
                     </div>
                     <div
-                        className="relative text-center flex flex-col overflow-hidden transition-all duration-500 ease-in-out"
+                        className="relative text-center flex flex-col overflow-hidden transition-all duration-500 ease-in-out max-md:!w-full"
                         style={{
                             width: showMore ? "29.166%" : "0px",
                             pointerEvents: showMore ? "auto" : "none",
@@ -89,9 +97,9 @@ export default function projectsPage(){
                 </div>
 
                 {/* paper 2 */}
-                <div className="transition-all w-full py-7 flex-1 flex flex-row flex-start items-start gap-10 justify-center">
+                <div className="transition-all w-full py-7 flex-1 flex flex-row flex-start items-start gap-10 justify-center max-md:flex-col max-md:items-stretch max-md:gap-6">
                     <div
-                        className="relative text-center flex flex-col overflow-hidden transition-all duration-500 ease-in-out"
+                        className="relative text-center flex flex-col overflow-hidden transition-all duration-500 ease-in-out max-md:!w-full"
                         style={{
                             width: showMoreSecond ? "29.166%" : "0px",
                             pointerEvents: showMoreSecond ? "auto" : "none",
@@ -106,7 +114,7 @@ export default function projectsPage(){
                         </div>
                     </div>
 
-                    <div className="transition-all relative w-[37.5%] text-center flex flex-col">
+                    <div className="transition-all relative w-[37.5%] max-md:!w-full text-center flex flex-col">
                         <h2 className="text-1xl py-3 flex justify-center font-black">
                             LLMs can Annotate Attribution Graphs
                         </h2>
@@ -175,7 +183,7 @@ export default function projectsPage(){
                             </div>
                     </div>
 
-                    <div className="relative w-[29.166%] text-center flex flex-col">
+                    <div className="relative w-[29.166%] max-md:!w-full text-center flex flex-col">
                         <h2 className="text-1xl py-3">Research Paper</h2>
                         <div className="w-full aspect-[1200/1300]">
                             <iframe
@@ -188,8 +196,8 @@ export default function projectsPage(){
                 </div>
 
                 {/* paper 3 */}
-                <div className="transition-all w-full py-7 flex-1 flex flex-row flex-start items-start gap-10 justify-center">
-                    <div className="relative w-[29.166%] text-center flex flex-col">
+                <div className="transition-all w-full py-7 flex-1 flex flex-row flex-start items-start gap-10 justify-center max-md:flex-col max-md:items-stretch max-md:gap-6">
+                    <div className="relative w-[29.166%] max-md:!w-full text-center flex flex-col">
                         <h2 className="text-1xl py-3">Research Paper</h2>
                         <div className="w-full aspect-[1200/1300]">
                             <iframe
@@ -200,7 +208,7 @@ export default function projectsPage(){
                         </div>
                     </div>
 
-                    <div className="relative w-[37.5%] text-center flex flex-col">
+                    <div className="relative w-[37.5%] max-md:!w-full text-center flex flex-col">
                         <h2 className="text-1xl py-3 flex justify-center font-black">
                             Response-Based Knowledge Distillation for Multilingual Jailbreak Prevention Unwittingly Compromises Safety
                         </h2>
@@ -245,7 +253,7 @@ export default function projectsPage(){
                     </div>
 
                     <div
-                        className="relative text-center flex flex-col overflow-hidden transition-all duration-500 ease-in-out"
+                        className="relative text-center flex flex-col overflow-hidden transition-all duration-500 ease-in-out max-md:!w-full"
                         style={{
                             width: showMoreThird ? "29.166%" : "0px",
                             pointerEvents: showMoreThird ? "auto" : "none",
@@ -263,9 +271,9 @@ export default function projectsPage(){
                 </div>
 
                 {/* paper 4 */}
-                <div className="transition-all w-full py-7 flex-1 flex flex-row flex-start items-start gap-10 justify-center">
+                <div className="transition-all w-full py-7 flex-1 flex flex-row flex-start items-start gap-10 justify-center max-md:flex-col max-md:items-stretch max-md:gap-6">
                     <div
-                        className="relative text-center flex flex-col overflow-hidden transition-all duration-500 ease-in-out"
+                        className="relative text-center flex flex-col overflow-hidden transition-all duration-500 ease-in-out max-md:!w-full"
                         style={{
                             width: showMoreFourth ? "29.166%" : "0px",
                             pointerEvents: showMoreFourth ? "auto" : "none",
@@ -281,7 +289,7 @@ export default function projectsPage(){
                         </div>
                     </div>
 
-                    <div className="relative w-[37.5%] text-center flex flex-col">
+                    <div className="relative w-[37.5%] max-md:!w-full text-center flex flex-col">
                         <h2 className="text-1xl py-3 flex justify-center font-black">
                             Interactive Web: Leveraging AI-Driven Code Generation to Simplify Web Development Algorithms for Novice Programmers
                         </h2>
@@ -304,7 +312,7 @@ export default function projectsPage(){
                         </div>
                     </div>
 
-                    <div className="relative w-[29.166%] text-center flex flex-col">
+                    <div className="relative w-[29.166%] max-md:!w-full text-center flex flex-col">
                         <h2 className="text-1xl py-3">Research Paper</h2>
                         <div className="w-full aspect-[1200/1300]">
                             <iframe
@@ -351,10 +359,10 @@ export default function projectsPage(){
                         </ul>
                     </div>
 
-                    <div className="w-full flex flex-row gap-10 py-6 h-[600px]">
-                            <div className="flex-[5] flex flex-col justify-start">
+                    <div className="w-full flex flex-row gap-10 py-6 h-[600px] max-md:flex-col max-md:h-auto max-md:gap-6">
+                            <div className="flex-[5] flex flex-col justify-start max-md:w-full">
                                 <p className="text-center pb-2">Notes</p>
-                                <div className="w-full h-2/3">
+                                <div className="w-full h-2/3 max-md:h-[400px]">
                                     <iframe
                                         src="https://drive.google.com/file/d/1smi1Jb2iMasL3tM9o6RAIPHk4gsY4kBD/preview"
                                         className="w-full h-full"
@@ -363,9 +371,9 @@ export default function projectsPage(){
                                 </div>
                             </div>
 
-                            <div className="flex-[3] flex flex-col justify-center">
+                            <div className="flex-[3] flex flex-col justify-center max-md:w-full">
                                 <p className="text-center pb-2">App Home Page</p>
-                                <div className="w-full h-5/6 relative">
+                                <div className="w-full h-5/6 relative max-md:h-[400px]">
                                     <Image
                                         src="/homepage.png"
                                         alt="BIRDIE home screen"
@@ -375,9 +383,9 @@ export default function projectsPage(){
                                 </div>
                             </div>
 
-                            <div className="flex-[5] flex flex-col justify-end">
+                            <div className="flex-[5] flex flex-col justify-end max-md:w-full">
                                 <p className="text-center pb-2">Demo</p>
-                                <div className="w-full h-2/3">
+                                <div className="w-full h-2/3 max-md:h-[300px]">
                                     <iframe
                                         src="https://www.youtube.com/embed/SDFEYmgquDs"
                                         className="w-full h-full"
@@ -391,7 +399,7 @@ export default function projectsPage(){
 
                  <h1 id = "hackathons" className="mt-5 text-4xl">Hackathons <a href="#research"  className="opacity-[0.5] px-2 !text-2xl">Research</a> <a href="#projects"  className="opacity-[0.5] px-2 !text-2xl">Projects</a></h1>
 
-                <div className="w-full flex flex-row gap-10 py-7 items-stretch">
+                <div className="w-full flex flex-row gap-10 py-7 items-stretch max-md:flex-col max-md:gap-6">
 
                     {/* Unify */}
                     <div className="flex-1 flex flex-col items-center">

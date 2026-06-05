@@ -9,10 +9,18 @@ import Link from "next/link";
 const GIF_DURATION = 1890;
 
 export default function meaningsPage() {
-    const [gifTs] = useState(() => Date.now());
+    // Date.now() must run only on the client to avoid SSR/hydration mismatch.
+    const [gifTs, setGifTs] = useState<number | null>(null);
     const [showGif, setShowGif] = useState(true);
     const [shake, setShake] = useState(false);
     const timersRef = useRef<ReturnType<typeof setTimeout>[]>([]);
+
+    useEffect(() => {
+        setGifTs(Date.now());
+        return () => {
+            timersRef.current.forEach(clearTimeout);
+        };
+    }, []);
 
     const handleGifLoad = () => {
         if (timersRef.current.length > 0) return;
@@ -23,12 +31,8 @@ export default function meaningsPage() {
         );
     };
 
-    useEffect(() => () => {
-        timersRef.current.forEach(clearTimeout);
-    }, []);
-
-    const figClass = "flex flex-col items-center";
-    const imgClass = "h-80 w-auto object-contain block shadow-sm";
+    const figClass = "flex flex-col items-center max-md:w-full";
+    const imgClass = "h-80 w-auto object-contain block shadow-sm max-md:h-auto max-md:w-full";
     const capClass = "mt-2 text-base opacity-60";
 
     return (
@@ -119,6 +123,13 @@ export default function meaningsPage() {
                             <img src="/school/3.png" alt="" className={imgClass} />
                             <figcaption className={capClass}>favorite class ever: AP Lang</figcaption>
                         </figure>
+                        <figure className={figClass}>
+                            <iframe
+                                src="/pdfjs/web/viewer.html?file=/essay.pdf#zoom=page-width"
+                                className="h-80 w-[500px] block shadow-sm"
+                            />
+                            <figcaption className={capClass}>lang exemplar and good worldview.</figcaption>
+                        </figure>
                     </div>
                 </section>
 
@@ -146,7 +157,7 @@ export default function meaningsPage() {
                 </section>
             </main>
 
-            {showGif && (
+            {showGif && gifTs !== null && (
                 <div className="gif">
                     <img src={`/point.gif?t=${gifTs}`} alt="" className="gifimg" onLoad={handleGifLoad} />
                 </div>

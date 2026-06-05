@@ -54,7 +54,7 @@ export default function moviesPage(){
                 <Header></Header>
                 <main className="relative w-full flex-1 px-10">
                    {/* THE COOL SHIT */}
-                   <div className="mt-15 text-center align-center grid grid-cols-3 grid-rows-3  h-[calc(100vh)]">
+                   <div className="mt-15 text-center align-center grid grid-cols-3 grid-rows-3 h-[calc(100vh)] max-md:grid-cols-2 max-md:grid-rows-none max-md:h-auto max-md:auto-rows-auto max-md:gap-4">
                         {/* <div className="w-full h-1/3 flex flex-row"> */}
                             <div className="grid grid-rows-2 gap-4 min-h-0">
                                 <img
@@ -92,9 +92,9 @@ export default function moviesPage(){
                             alt="michael"
                             className="w-full p-5 h-full object-contain transition-transform duration-300 hover:scale-105"
                             />
-                            <div className="mt-7 flex flex-col">
-                                <h1 id = "title" className="text-4xl self-center ">Part-time at AMC Theaters</h1>
-                                <h2 className="text-1xl text-gray">since august 2025. ask me about weird work stories</h2>
+                            <div className="mt-7 flex flex-col max-md:col-span-2">
+                                <h1 id = "title" className="text-4xl self-center max-md:text-2xl">Part-time at AMC Theaters</h1>
+                                <h2 className="text-1xl text-gray max-md:text-sm">since august 2025. ask me about weird work stories</h2>
                             </div>
                             
                             <img
@@ -131,8 +131,8 @@ export default function moviesPage(){
                    </div>
 
                     {/* movies in genearl */}
-                    <h1 className="mt-15 text-4xl mb-3 self-center ">Movies, films, and anime in general</h1>
-                    <h1 className=" text-2xl mb-7 self-center ">Mostly from during Junior year. I usually watch something every week. This started because of <a className="text-[#0064C7]" href="#title">AMC</a> and surprisingly AP Lang, which made media more interesting in general. Follow my new <Link className="text-[#0064C7]" href="https://letterboxd.com/maxz119/" target="_blank" rel="noopener noreferrer">letterboxd.</Link></h1>
+                    <h1 className="mt-15 text-4xl mb-3 self-center max-md:text-2xl">Movies, films, and anime in general</h1>
+                    <h1 className=" text-2xl mb-7 self-center max-md:text-base">Mostly from during Junior year. I usually watch something every week. This started because of <a className="text-[#0064C7]" href="#title">AMC</a> and surprisingly AP Lang, which made media more interesting in general. Follow my new <Link className="text-[#0064C7]" href="https://letterboxd.com/maxz119/" target="_blank" rel="noopener noreferrer">letterboxd.</Link></h1>
 
 
                     <div className="mb-15 w-full">
@@ -142,14 +142,19 @@ export default function moviesPage(){
                         >
                             recent watches {showRankings ? "▲" : "▼"}
                         </button>
+                        {showRankings && (
+                            <a href="#lossy" className="hidden max-md:inline-block ml-4 text-xl text-[#0064C7] hover:opacity-70">
+                                scroll down ↓
+                            </a>
+                        )}
                         <div
                             className={`
                                 mt-2 overflow-hidden transition-all duration-500 ease-in-out
                                 ${showRankings ? "opacity-100" : "max-h-0 opacity-0"}
                             `}
                         >
-                            <div className="w-full flex flex-row gap-10 h-[80vh]">
-                                <div className="w-1/2 overflow-y-auto">
+                            <div className="w-full flex flex-row gap-10 h-[80vh] max-md:flex-col max-md:h-auto max-md:gap-8">
+                                <div className="w-1/2 overflow-y-auto max-md:w-full max-md:h-[60vh]">
                                     <table className="w-full border-collapse border border-gray-300 text-left font-sans">
                                         <thead className="sticky top-0 bg-white">
                                             <tr>
@@ -167,9 +172,9 @@ export default function moviesPage(){
                                         </tbody>
                                     </table>
                                 </div>
-                                <div className="w-1/2 flex flex-col">
+                                <div id="lossy" className="w-1/2 flex flex-col max-md:w-full scroll-mt-4">
                                     <p className="mb-3">Lossy metrics (Rating /10) aren't nice. Feel free to skim through braindumps I write down after watches. Some are detailed, some aren't.</p>
-                                    <iframe className="flex-1" src="/pdfjs/web/viewer.html?file=/movies/life.pdf"></iframe>
+                                    <iframe className="flex-1 max-md:h-[70vh]" src="/pdfjs/web/viewer.html?file=/movies/life.pdf"></iframe>
                                 </div>
                             </div>
                         </div>
