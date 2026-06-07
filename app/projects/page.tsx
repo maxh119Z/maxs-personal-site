@@ -30,7 +30,7 @@ export default function projectsPage(){
 
             <main className="px-5 md:px-10 relative w-full flex-1 flex-col">
                 <h1 id = "research" className="mt-5 text-4xl">Research</h1>
-                <h1 id = "research" className="mt-1 text-lg">For less information or awards, just check my <Link className="text-[#0064C7]" href="https://www.linkedin.com/in/max-zhang-524b72361/" target="_blank" rel="noopener noreferrer">Linkedin.</Link></h1>
+                <h1 id = "research" className="mt-1 text-lg">For less information or awards, just check my <Link className="text-[#0064C7]" href="https://www.linkedin.com/in/max-zhang-524b72361/" target="_blank" rel="noopener noreferrer">Linkedin.</Link> or <Link href="/max_resume.pdf"  className="text-[#0064C7]" target="_blank" rel="noopener noreferrer">Resume</Link></h1>
                 
                 {/* paper 1 */}
                 <div className="transition-all w-full py-7 flex-1 flex flex-row flex-start items-start gap-10 justify-center max-md:flex-col max-md:items-stretch max-md:gap-6">
