@@ -34,7 +34,10 @@ export default function HeaderMeaning({ shake = false }: { shake?: boolean }) {
         "It is amazing what you can accomplish if you do not care who gets the credit.",
         "Maybe life has no equal trade, maybe you can give up all you got, and get nothing back. Even if I can't prove it's true, I have to try",
         "'It hasn't even been 1/100th of my life.' 'It's interesting, isn't it? That this 1/100th changed you.'",
-        "Great Scott!"
+        "Great Scott!",
+        "One of the advantages of designing without pencil and paper is that you’re almost forced to avoid all avoidable complexities.",
+        "You thought we could be decent men in an indecent time.",
+        "Every word is a dead metaphor."
     ];
 
     const attributions = [
@@ -55,7 +58,10 @@ export default function HeaderMeaning({ shake = false }: { shake?: boolean }) {
         "Harry S. Truman",
         "Edward Elric",
         "Frieren, then Eisen",
-        "Doc and Marty"
+        "Doc and Marty",
+        "Dijkstra",
+        "Dark Knight",
+        "Jorge Luis"
     ];
 
     useEffect(() => {
