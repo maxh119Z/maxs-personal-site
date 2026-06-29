@@ -32,8 +32,9 @@ export default function Header({ children }: { children?: React.ReactNode } = {}
         "'It hasn't even been 1/100th of my life.' 'It's interesting, isn't it? That this 1/100th changed you.'",
         "Great Scott!",
         "One of the advantages of designing without pencil and paper is that you’re almost forced to avoid all avoidable complexities.",
-        "You thought we could be decent men in an indecent time.",
-        "Every word is a dead metaphor."
+        "Are we also losing our capacity for rage?",
+        "What? This isn't true! I didn't write this! Mima's Ghost: Of course you didn't. The real Mima is writing this.",
+        "You mustn't be afraid to dream a little bigger, darling."
     ];
 
     const attributions = [
@@ -56,8 +57,9 @@ export default function Header({ children }: { children?: React.ReactNode } = {}
         "Frieren, then Eisen",
         "Doc and Marty",
         "Dijkstra",
-        "Dark Knight",
-        "Jorge Luis"
+        "Byung-Chul Han",
+        "Perfect Blue",
+        "Inception"
     ];
 
     useEffect(() => {
