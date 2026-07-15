@@ -40,7 +40,7 @@ export default function projectsPage(){
                         <h2 className="text-1xl py-3 max-md:hidden">Research Paper</h2>
                         <div className="w-full aspect-[1200/1300]">
                             <iframe
-                                src="/pdfjs/web/viewer.html?file=/papers/safety-irt-colm.pdf#zoom=page-width"
+                                src="https://drive.google.com/file/d/1cEjj78UTTB4FwjXRm2ObNsYpTrlIPh89/preview"
                                 className="w-full h-full"
                                 allow="autoplay"
                             />
@@ -207,7 +207,7 @@ export default function projectsPage(){
                         <h2 className="text-1xl py-3 max-md:hidden">Research Paper</h2>
                         <div className="w-full aspect-[1200/1300]">
                             <iframe
-                                src="/pdfjs/web/viewer.html?file=/papers/rb-distillation-safety.pdf#zoom=page-width"
+                                src="https://drive.google.com/file/d/1YlzCVy-RAhyxIoYJa8fMrmCrpYR5SpMI/preview"
                                 className="w-full h-full"
                                 allow="autoplay"
                             />
@@ -324,7 +324,7 @@ export default function projectsPage(){
                         <h2 className="text-1xl py-3 max-md:hidden">Research Paper</h2>
                         <div className="w-full aspect-[1200/1300]">
                             <iframe
-                                src="/pdfjs/web/viewer.html?file=/papers/interactive-web.pdf#zoom=page-width"
+                                src="https://drive.google.com/file/d/1PqS-VBDGMUTo-MNrluJqKjJJRBAUtdLY/preview"
                                 className="w-full h-full"
                                 allow="autoplay"
                             />
