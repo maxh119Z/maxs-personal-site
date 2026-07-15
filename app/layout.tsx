@@ -17,7 +17,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://maxzhang1.me"),
   title: "Max Zhang",
-  description: "Max Zhang's personal site, a Junior at Irvington High school: AI research and projects, plus drawing, movies, badminton, and life.",
+  description: "Max Zhang: high school ML researcher. I also like drawing, watching movies, and competitive Badminton.",
   openGraph: {
     title: "Max Zhang",
     images: ["/selfie.jpeg"],

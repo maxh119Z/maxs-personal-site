@@ -6,63 +6,11 @@ import { usePathname } from 'next/navigation'
 
 export default function Header() {
     const [isVisible, setIsVisible] = useState(false);
-    const [quote, setQuote] = useState("");
-    const [attribution, setAttribution] = useState("");
     const [menuOpen, setMenuOpen] = useState(false);
     const pathname = usePathname();
     const isHomePage = pathname === '/'
 
-    const quotes = [
-        "Find a friend who is so different from you, and you can’t believe how much you have in common.",
-        "Yet somehow we think we can grow, feeding on flowers and fireworks, without completing the cycle back to reality.",
-        "The internet may be making us shallow, but it’s making us think we’re deep.",
-        "[It is] not only those whose dreams are flouted but also to those who never realize that they may dream.",
-        "Will you take that phony dream and burn it before something happens?",
-        "Standing on the bare ground — my head bathed by the blithe air, and uplifted into infinite space — all mean egotism vanishes. I become a transparent eye-ball; I am nothing; I see all; the currents of the Universal Being circulate through me; I am part or particle of God.",
-        "A rich man’s war, and a poor man’s fight.",
-        "Thy love afar is spite at home.",
-        "I never really had a Charlie Parker. But I tried. I actually fucking tried. And that's more than most people ever do.",
-        "Maybe I'm one of those people that has always wanted to do it, but it's like a pipe dream for me, you know? And then, you said it, you change your dreams, and then you grow up.",
-        "Seita. Thank you.",
-        "When a measure becomes a target, it ceases to be a good measure.",
-        "Mr. President, we must not allow a mine-shaft gap!",
-        "Maybe life has no equal trade, maybe you can give up all you got, and get nothing back. Even if I can't prove it's true, I have to try",
-        "'It hasn't even been 1/100th of my life.' 'It's interesting, isn't it? That this 1/100th changed you.'",
-        "Great Scott!",
-        "One of the advantages of designing without pencil and paper is that you’re almost forced to avoid all avoidable complexities.",
-        "Are we also losing our capacity for rage?",
-        "What? This isn't true! I didn't write this! Mima's Ghost: Of course you didn't. The real Mima is writing this.",
-        "You mustn't be afraid to dream a little bigger, darling."
-    ];
-
-    const attributions = [
-        "Nye",
-        "Fahrenheit 451",
-        "Nicholas Carr",
-        "Citizens of the republic",
-        "Death of a Salesman",
-        "Ralph Waldo Emerson",
-        "I'm not sure",
-        "Ralph Waldo Emerson",
-        "Fletcher, Whiplash",
-        "Mia",
-        "Grave of the Fireflies",
-        "Goodhart’s law",
-        "Dr Strangelove",
-        "Edward Elric",
-        "Frieren, then Eisen",
-        "Doc and Marty",
-        "Dijkstra",
-        "Byung-Chul Han",
-        "Perfect Blue",
-        "Inception"
-    ];
-
     useEffect(() => {
-        const randomIndex = Math.floor(Math.random()*quotes.length);
-        setQuote(quotes[randomIndex]);
-        setAttribution(attributions[randomIndex]);
-
         setIsVisible(true);
     }, []);
 

@@ -1,0 +1,23 @@
+// gallery captions
+export const CAPTIONS: Record<string, string> = {
+    "drawing/art_1.png": "frieren and the hero's party",
+    "drawing/art_yosemite.png": "yosemite painting from 7th grade.",
+    "drawing/art_2.png": "autumn leaves in a wispy forest",
+    "drawing/long_good.jpg": "flowers in art 1, hana-bi",
+    "drawing/long.png": "flowers in art 1, hana-bi",
+    "drawing/people_overview.png": "an overview on my wall",
+    "drawing/people.png": "a cyclops? allen the alien but badly drawn?",
+    "drawing/npeople.jpg": "Berserk is one of my favorite mangas (griffith + guts)",
+    "drawing/person2.jpg": "tried drawing people of different ages. Learning how to add wrinkles",
+    "drawing/eye.jpg": "followed a tutorial and it turned out quite well",
+    "drawing/eye_good.jpg": "followed a tutorial and it turned out quite well",
+    "drawing/faces.png": "a pre-weekend outline of face structures",
+    "drawing/other.png": "random petals",
+    "drawing/other1.jpg": "I drew this with my friends at school with marker. Visual arts elective, abstract art.",
+    "drawing/other2.jpg": "from a visual arts elective I had for a few months in 7th grade.",
+    "drawing/other3.jpg": "cool shapes and patterns",
+    "drawing/ipad2.png": "I drew this after watching Boy and Heron with my brother. Referenced from image I found online.",
+    "drawing/ipad_weekend.png": "I drew this after the Weekend concert 2025 Julyish?",
+    "drawing/ipad1.jpg": "I drew this on a long plane flight to Cancun for winter break with my brother. Inspired by Studio Ghibli's movie.",
+    "drawing/ipad3.jpg": "I drew this on a plane ride on Ana's iPad. The hair is questionable",
+};
