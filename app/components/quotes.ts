@@ -14,28 +14,8 @@ export const QUOTES: Quote[] = [
         attribution: "Nicholas Carr",
     },
     {
-        quote: "[It is] not only those whose dreams are flouted but also to those who never realize that they may dream.",
-        attribution: "Citizens of the republic",
-    },
-    {
-        quote: "Will you take that phony dream and burn it before something happens?",
-        attribution: "Death of a Salesman",
-    },
-    {
         quote: "Standing on the bare ground — my head bathed by the blithe air, and uplifted into infinite space — all mean egotism vanishes. I become a transparent eye-ball; I am nothing; I see all; the currents of the Universal Being circulate through me; I am part or particle of God.",
         attribution: "Ralph Waldo Emerson",
-    },
-    {
-        quote: "A rich man’s war, and a poor man’s fight.",
-        attribution: "I'm not sure",
-    },
-    {
-        quote: "Thy love afar is spite at home.",
-        attribution: "Ralph Waldo Emerson",
-    },
-    {
-        quote: "I never really had a Charlie Parker. But I tried. I actually fucking tried. And that's more than most people ever do.",
-        attribution: "Fletcher, Whiplash",
     },
     {
         quote: "Maybe I'm one of those people that has always wanted to do it, but it's like a pipe dream for me, you know? And then, you said it, you change your dreams, and then you grow up.",
@@ -80,5 +60,17 @@ export const QUOTES: Quote[] = [
     {
         quote: "You mustn't be afraid to dream a little bigger, darling.",
         attribution: "Inception",
+    },
+    {
+        quote: "You teach best what you most need to learn.",
+        attribution: "Richard Bach"
+    },
+    {
+        quote: "But as things got thinner. . . our hearts got thinner, too. I suppose that kept things in balance.",
+        attribution: "The Memory Police"
+    },
+    {
+        quote: "The best gift I can give you is one of the things I’ve been hiding",
+        attribution: "The Memory Police"
     },
 ];

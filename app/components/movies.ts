@@ -1,5 +1,16 @@
 // top = more recently watched
 export const MOVIES: [string, number][] = [
+    ["Adaptation", 8.5],
+    ["Loki2", 7.5],
+    ["Hadestown", 9],
+    ["Loki", 7.8],
+    ["Spiderman BND", 7.2],
+    ["Yesterday", 7.7],
+    ["Cyperpunk Edgerunners", 8.3],
+    ["Millenium Actress", 7.7],
+    ["Oddyssey", 7.9],
+    ["Goodwill hunting", 9],
+    ["Perks of being a wallflower", 8.6],
     ["Eternal Sunshine of the Spotless Mind", 8.9],
     ["The Big Short", 8.1],
     ["American Psycho", 8.3],
