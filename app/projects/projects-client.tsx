@@ -50,7 +50,7 @@ export default function projectsPage(){
                         <h2 className="text-1xl py-3 flex justify-center font-black max-md:hidden">Why Do Safety Guardrails Degrade Across Languages?</h2>
                         <div className="text-1xl flex flex-row justify-center opacity-70 flex-wrap"><p className="font-semibold">Max Zhang<span className="text-s align-top relative -top-1">*</span></p>, Ameen Patel<span className="text-s align-top relative -top-1">*</span>, Sang Truong<span className="text-s align-top relative -top-1">**</span>, Sanmi Koyejo<span className="text-s align-top relative -top-1">**</span></div>
                         <div className="text-1xl flex flex-row justify-center opacity-70 flex-wrap"><span className="text-s align-top relative -top-1">*</span>: Equal contribution, <span className="text-s align-top relative -top-1">**</span>: Equal senior authorship</div>
-                        <div className="text-1xl flex flex-row justify-center opacity-70">COLM main conference; Stanford AIMS lab</div>
+                        <div className="text-1xl flex flex-row justify-center opacity-70">COLM main conference; STAIR</div>
                         <div className="flex flex-row justify-center gap-5 flex-wrap">
                             <Link className={`py-3 flex text-[#0064C7] ${!showMore ? 'max-md:hidden' : ''}`} href="https://github.com/aims-foundations/safety-irt" target="_blank" rel="noopener noreferrer">[Github]</Link>
                             <Link className={`py-3 flex text-[#0064C7] ${!showMore ? 'max-md:hidden' : ''}`} href="https://arxiv.org/pdf/2605.17173" target="_blank" rel="noopener noreferrer">[PDF]</Link>
