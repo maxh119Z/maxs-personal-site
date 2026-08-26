@@ -138,7 +138,7 @@ export default function projectsPage(){
                         </div>
 
                         <div className="text-1xl flex flex-row justify-center opacity-70">
-                            Under review at ICML Mech Interp
+                            Poster at ICML Mech Interp
                         </div>
 
                         <div className="flex flex-row justify-center gap-5 flex-wrap">
