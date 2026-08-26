@@ -73,4 +73,9 @@ export const QUOTES: Quote[] = [
         quote: "The best gift I can give you is one of the things I’ve been hiding",
         attribution: "The Memory Police"
     },
+    {
+        quote: "Algorithms are opinions embedded in code",
+        attribution: "Cathy O'Neil"
+
+    },
 ];

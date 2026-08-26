@@ -54,7 +54,7 @@ export default function Header() {
                 height={172}
                 className="object-cover -ml-1 max-md:w-full max-md:h-auto max-md:ml-0"
             />
-            <p  className="mt-2 text-xl">junior year watches (outdated)</p>
+            <p  className="mt-2 text-xl">junior year watches (very outdated)</p>
         </div>
 
 
