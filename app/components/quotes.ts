@@ -20,7 +20,7 @@ export const QUOTES: Quote[] = [
     {
         quote: "Maybe I'm one of those people that has always wanted to do it, but it's like a pipe dream for me, you know? And then, you said it, you change your dreams, and then you grow up.",
         attribution: "Mia",
-    }
+    },
     // {
     //     quote: "Seita. Thank you.",
     //     attribution: "Grave of the Fireflies",
