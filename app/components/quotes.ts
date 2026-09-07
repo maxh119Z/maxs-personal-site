@@ -20,11 +20,11 @@ export const QUOTES: Quote[] = [
     {
         quote: "Maybe I'm one of those people that has always wanted to do it, but it's like a pipe dream for me, you know? And then, you said it, you change your dreams, and then you grow up.",
         attribution: "Mia",
-    },
-    {
-        quote: "Seita. Thank you.",
-        attribution: "Grave of the Fireflies",
-    },
+    }
+    // {
+    //     quote: "Seita. Thank you.",
+    //     attribution: "Grave of the Fireflies",
+    // },
     {
         quote: "When a measure becomes a target, it ceases to be a good measure.",
         attribution: "Goodhart’s law",
@@ -41,14 +41,14 @@ export const QUOTES: Quote[] = [
         quote: "'It hasn't even been 1/100th of my life.' 'It's interesting, isn't it? That this 1/100th changed you.'",
         attribution: "Frieren, then Eisen",
     },
-    {
-        quote: "Great Scott!",
-        attribution: "Doc and Marty",
-    },
-    {
-        quote: "One of the advantages of designing without pencil and paper is that you’re almost forced to avoid all avoidable complexities.",
-        attribution: "Dijkstra",
-    },
+    // {
+    //     quote: "Great Scott!",
+    //     attribution: "Doc and Marty",
+    // },
+    // {
+    //     quote: "One of the advantages of designing without pencil and paper is that you’re almost forced to avoid all avoidable complexities.",
+    //     attribution: "Dijkstra",
+    // },
     {
         quote: "Are we also losing our capacity for rage?",
         attribution: "Byung-Chul Han",
@@ -57,10 +57,10 @@ export const QUOTES: Quote[] = [
         quote: "What? This isn't true! I didn't write this! Mima's Ghost: Of course you didn't. The real Mima is writing this.",
         attribution: "Perfect Blue",
     },
-    {
-        quote: "You mustn't be afraid to dream a little bigger, darling.",
-        attribution: "Inception",
-    },
+    // {
+    //     quote: "You mustn't be afraid to dream a little bigger, darling.",
+    //     attribution: "Inception",
+    // },
     {
         quote: "You teach best what you most need to learn.",
         attribution: "Richard Bach"
@@ -78,4 +78,12 @@ export const QUOTES: Quote[] = [
         attribution: "Cathy O'Neil"
 
     },
+    {
+        quote: "When the residents forget birds and roses, they forget what these things conjure inside them: flight, freedom, extravagance, desire.",
+        attribution: "Tolentino - on the Memory Police"
+    },
+    {
+        quote: "There are two kinds of arrogance. One where you are unequal to the task and one where your dreams are too big. The former is commonplace stupidity, but the latter is a rare species that is difficult to find.",
+        attribution: "Fate zero, Gilgamesh"
+    }
 ];
