@@ -35,7 +35,7 @@ export default function HeaderMeaning({ shake = false }: { shake?: boolean }) {
                     <Link href="/drawings">drawings</Link>
                     <Link href="/projects">projects</Link>
                     <Link href="/meaning">life</Link>
-                    <Link href="/movies">movies</Link>
+                    <Link href="/movies">movies+reads</Link>
                 </div>
             </div>
             <div className="mt-4 flex flex-row w-full items-start max-md:flex-col max-md:items-center">

@@ -9,6 +9,21 @@ import { useState } from "react";
 // collage is 3 columns on desktop, 2 on mobile
 const COLLAGE_SIZES = "(max-width: 767px) 50vw, 33vw";
 
+// reads: [cover file in /reads or null (placeholder until dropped in), title, goodreads link]
+const gr = (q: string) => `https://www.goodreads.com/search?q=${encodeURIComponent(q)}`;
+const CURRENT_READS: [string | null, string, string][] = [
+    ["/reads/ethicalalgo.png", "The Ethical Algorithm", gr("The Ethical Algorithm Kearns Roth")],
+    ["/reads/less.webp", "Less, Andrew Sean Greer", gr("Less Andrew Sean Greer")],
+    ["/reads/gmorninggnight.jpg", "Gmorning, Gnight! Little Pep Talks for Me & You", gr("Gmorning Gnight Lin-Manuel Miranda")],
+    ["/reads/4000weeks.jpg", "Four Thousand Weeks", gr("Four Thousand Weeks Oliver Burkeman")],
+];
+const RECENT_READS: [string | null, string, string][] = [
+    ["/reads/weaponsofmath.png", "Weapons of Math Destruction", gr("Weapons of Math Destruction Cathy O'Neil")],
+    ["/reads/memory-police.jpg", "The Memory Police", gr("The Memory Police Yoko Ogawa")],
+    ["/reads/housekeeper.jpg", "The Housekeeper and the Professor", gr("The Housekeeper and the Professor Yoko Ogawa")],
+    ["/reads/burnout.jpg", "The Burnout Society", gr("The Burnout Society Byung-Chul Han")],
+];
+
 export default function moviesPage(){
     const [hopinvisible, setivisible] = useState(false);
     const [showRankings, setShowRankings] = useState(false);
@@ -17,10 +32,41 @@ export default function moviesPage(){
         setivisible(true);
 
     }
+    const Book = ({ src, title, href }: { src: string | null; title: string; href: string }) => (
+        <div className="flex flex-col items-center w-52 max-w-full max-md:w-full">
+            {src ? (
+                <img src={src} alt={title} className="h-80 w-auto object-contain block shadow-sm max-md:h-auto max-md:w-full" />
+            ) : (
+                <div className="h-80 w-52 max-w-full flex items-center justify-center border border-dashed border-gray-400 text-gray-400 max-md:h-60 max-md:w-full">cover</div>
+            )}
+            <p className="mt-2 text-base text-center">
+                <a href={href} target="_blank" rel="noopener noreferrer" className="text-[#0064C7] hover:opacity-70">{title}</a>
+            </p>
+        </div>
+    );
     return (
             <div className="flex flex-col flex-1 items-center justify-center text-black bg-white font-sans">
                 <Header></Header>
                 <main className="relative w-full flex-1 px-10">
+                   {/* reads */}
+                   <section id="current-reads" className="mt-15">
+                        <h2 className="text-4xl font-light mb-6">current reads</h2>
+                        <div className="flex flex-wrap items-end gap-6 justify-start">
+                            {CURRENT_READS.map(([src, title, href]) => (
+                                <Book key={title} src={src} title={title} href={href} />
+                            ))}
+                        </div>
+                   </section>
+
+                   <section id="recent-reads" className="mt-15">
+                        <h2 className="text-4xl font-light mb-6">recent reads (since summer)</h2>
+                        <div className="flex flex-wrap items-end gap-6 justify-start">
+                            {RECENT_READS.map(([src, title, href]) => (
+                                <Book key={title} src={src} title={title} href={href} />
+                            ))}
+                        </div>
+                   </section>
+
                    {/* THE COOL SHIT */}
                    <div className="mt-15 text-center align-center grid grid-cols-3 grid-rows-3 h-[calc(100vh)] max-md:grid-cols-2 max-md:grid-rows-none max-md:h-auto max-md:auto-rows-auto max-md:gap-4">
                         {/* <div className="w-full h-1/3 flex flex-row"> */}
@@ -132,6 +178,24 @@ export default function moviesPage(){
                     <h1 className="mt-15 text-4xl mb-3 self-center max-md:text-2xl">Movies, films, and anime in general</h1>
                     <h1 className=" text-2xl mb-7 self-center max-md:text-base">Mostly from during Junior year. I usually watch something every week. This started because of <a className="text-[#0064C7]" href="#title">AMC</a> and surprisingly AP Lang, which made media more interesting in general. Follow my new <Link className="text-[#0064C7]" href="https://letterboxd.com/maxz119/" target="_blank" rel="noopener noreferrer">letterboxd.</Link></h1>
 
+                    {/* undergallery: full-width row of 5 on desktop, stacked on mobile */}
+                    <div className="w-full mb-15 flex flex-row gap-6 max-md:flex-col max-md:gap-6">
+                        {[
+                            "/movies/undergallery/1A8AE390-E3C3-4D1C-9DB3-328B96FEC243_1_105_c.jpeg",
+                            "/movies/undergallery/7B1A9D33-1A38-45A7-AD7B-C472BD6352E7_1_105_c.jpeg",
+                            "/movies/undergallery/E44D4315-C140-4388-B49C-4C49B93CAA83_1_105_c.jpeg",
+                            "/movies/undergallery/E48937C2-DDDD-47E6-9A56-804CFC42CDCB_1_105_c.jpeg",
+                            "/movies/undergallery/img7753.jpg",
+                        ].map((src) => (
+                            <img
+                                key={src}
+                                src={src}
+                                alt=""
+                                className="flex-1 min-w-0 h-52 w-full object-cover max-md:flex-none max-md:h-auto max-md:w-full"
+                            />
+                        ))}
+                    </div>
+
 
                     <div className="mb-15 w-full">
                         <button
@@ -171,7 +235,7 @@ export default function moviesPage(){
                                     </table>
                                 </div>
                                 <div id="lossy" className="w-1/2 flex flex-col max-md:w-full scroll-mt-4">
-                                    <p className="mb-3">Lossy metrics (Rating /10) aren't nice. Feel free to skim through braindumps I write down after watches. Some are detailed, some aren't.</p>
+                                    <p className="mb-3">Lossy metrics (Rating /10) aren't nice. Feel free to skim through braindumps I write down after watches. Some are detailed, some aren't. It's quite outdated, my current doc is 30+ pages.</p>
                                     <iframe className="flex-1 max-md:h-[70vh]" src="/pdfjs/web/viewer.html?file=/movies/life.pdf"></iframe>
                                 </div>
                             </div>

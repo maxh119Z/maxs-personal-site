@@ -31,7 +31,13 @@ export default function projectsPage(){
             <main className="px-5 md:px-10 relative w-full flex-1 flex-col">
                 <h1 id = "research" className="mt-5 text-4xl">Research</h1>
                 <h1 id = "research" className="mt-1 text-lg">For less information or awards, just check my <Link className="text-[#0064C7]" href="https://www.linkedin.com/in/max-zhang-524b72361/" target="_blank" rel="noopener noreferrer">Linkedin</Link> or <Link href="/max_resume.pdf"  className="text-[#0064C7]" target="_blank" rel="noopener noreferrer">Resume</Link></h1>
-                
+
+                {/* paper: STAIR benchmarks (title only for now) */}
+                <div className="w-full py-7 flex flex-col items-center text-center">
+                    <h2 className="text-1xl py-3 font-black max-w-3xl">Trustworthy Private AI Benchmarks Require External Verification</h2>
+                    <div className="text-1xl opacity-70"><a className="text-[#0064C7]" href="https://stairlab.stanford.edu/" target="_blank" rel="noopener noreferrer">STAIR</a>; in progress</div>
+                </div>
+
                 {/* paper 1 */}
                 <div className="transition-all w-full py-7 flex-1 flex flex-row flex-start items-start gap-10 justify-center max-md:flex-col max-md:items-stretch max-md:gap-6">
                     {/* mobile-only title above iframe */}
@@ -50,7 +56,7 @@ export default function projectsPage(){
                         <h2 className="text-1xl py-3 flex justify-center font-black max-md:hidden">Why Do Safety Guardrails Degrade Across Languages?</h2>
                         <div className="text-1xl flex flex-row justify-center opacity-70 flex-wrap"><p className="font-semibold">Max Zhang<span className="text-s align-top relative -top-1">*</span></p>, Ameen Patel<span className="text-s align-top relative -top-1">*</span>, Sang Truong<span className="text-s align-top relative -top-1">**</span>, Sanmi Koyejo<span className="text-s align-top relative -top-1">**</span></div>
                         <div className="text-1xl flex flex-row justify-center opacity-70 flex-wrap"><span className="text-s align-top relative -top-1">*</span>: Equal contribution, <span className="text-s align-top relative -top-1">**</span>: Equal senior authorship</div>
-                        <div className="text-1xl flex flex-row justify-center opacity-70">COLM main conference; STAIR</div>
+                        <div className="text-1xl flex flex-row justify-center opacity-70"><span>COLM main conference; <a className="text-[#0064C7]" href="https://stairlab.stanford.edu/" target="_blank" rel="noopener noreferrer">STAIR</a></span></div>
                         <div className="flex flex-row justify-center gap-5 flex-wrap">
                             <Link className={`py-3 flex text-[#0064C7] ${!showMore ? 'max-md:hidden' : ''}`} href="https://github.com/aims-foundations/safety-irt" target="_blank" rel="noopener noreferrer">[Github]</Link>
                             <Link className={`py-3 flex text-[#0064C7] ${!showMore ? 'max-md:hidden' : ''}`} href="https://arxiv.org/pdf/2605.17173" target="_blank" rel="noopener noreferrer">[PDF]</Link>

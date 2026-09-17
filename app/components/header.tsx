@@ -32,7 +32,7 @@ export default function Header({ children }: { children?: React.ReactNode } = {}
                 <Link href="/drawings">drawings</Link>
                 <Link href="/projects">projects</Link>
                 <Link href="/meaning">life</Link>
-                <Link href="/movies">movies</Link>
+                <Link href="/movies">movies+reads</Link>
             </div>
         </div>
         {isHomePage && (

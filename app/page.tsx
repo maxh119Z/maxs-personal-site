@@ -41,7 +41,7 @@ export default function Home() {
               height={1200}
               className="w-10/12 h-auto object-contain object-left-top max-md:w-full"
             />
-            <p className="mt-2 text-xl">watching movies</p>
+            <p className="mt-2 text-xl">movies + reading</p>
           </Link>
 
           <Link href="/projects" className="block w-full self-start max-md:w-[85%] max-md:self-end max-md:text-right">

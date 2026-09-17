@@ -25,7 +25,7 @@ export default function Header() {
                 <Link href="/drawings">drawings</Link>
                 <Link href="/projects">projects</Link>
                 <Link href="/meaning">life</Link>
-                <Link href="/movies">movies</Link>
+                <Link href="/movies">movies+reads</Link>
             </div>
         </div>
         <div className="mt-4 flex flex-row w-full max-md:flex-col max-md:items-center max-md:text-center max-md:gap-4">
