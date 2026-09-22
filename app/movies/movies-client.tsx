@@ -16,6 +16,7 @@ const CURRENT_READS: [string | null, string, string][] = [
     ["/reads/less.webp", "Less, Andrew Sean Greer", gr("Less Andrew Sean Greer")],
     ["/reads/gmorninggnight.jpg", "Gmorning, Gnight! Little Pep Talks for Me & You", gr("Gmorning Gnight Lin-Manuel Miranda")],
     ["/reads/4000weeks.jpg", "Four Thousand Weeks", gr("Four Thousand Weeks Oliver Burkeman")],
+    ["/reads/1984.png", "1984", gr("1984 George Orwell")],
 ];
 const RECENT_READS: [string | null, string, string][] = [
     ["/reads/weaponsofmath.png", "Weapons of Math Destruction", gr("Weapons of Math Destruction Cathy O'Neil")],
