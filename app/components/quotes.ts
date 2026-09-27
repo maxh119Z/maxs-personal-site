@@ -97,5 +97,10 @@ export const QUOTES: Quote[] = [
     {
         quote: "It’s not always at the top of the mountain. It might be in a crack on the smoothest cliff or somewhere deep in the valley.",
         attribution: "Housekeeper and the Professor"
+    },
+    {
+        quote: "I don’t think we’re ever going to get to utopia again by going forward, but only roundabout or sideways . . . Will you choose freedom without happiness, or happiness without freedom? The only answer one can make, I think is: No.",
+        attribution: "Ursula Le Guin"
     }
 ];
+
