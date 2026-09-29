@@ -101,6 +101,14 @@ export const QUOTES: Quote[] = [
     {
         quote: "I don’t think we’re ever going to get to utopia again by going forward, but only roundabout or sideways . . . Will you choose freedom without happiness, or happiness without freedom? The only answer one can make, I think is: No.",
         attribution: "Ursula Le Guin"
+    },
+    {
+        quote: "It is not a progress toward achievement, followed by stasis, which is the machine's mode, but an interactive, rhythmic, and unstable process which constitutes an end in itself.",
+        attribution: "Ursula Le Guin"
+    },
+    {
+        quote: "Prisons are built with stones of law",
+        attribution: "William Blake"
     }
 ];
 
