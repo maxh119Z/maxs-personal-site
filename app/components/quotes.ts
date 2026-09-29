@@ -109,6 +109,10 @@ export const QUOTES: Quote[] = [
     {
         quote: "Prisons are built with stones of law",
         attribution: "William Blake"
+    },
+    {
+        quote: "Like a dog with a bird at your door",
+        attribution: "Phoebe Bridgers"
     }
 ];
 
