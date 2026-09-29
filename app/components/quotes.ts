@@ -49,10 +49,10 @@ export const QUOTES: Quote[] = [
     //     quote: "One of the advantages of designing without pencil and paper is that you’re almost forced to avoid all avoidable complexities.",
     //     attribution: "Dijkstra",
     // },
-    {
-        quote: "Are we also losing our capacity for rage?",
-        attribution: "Byung-Chul Han",
-    },
+    // {
+    //     quote: "Are we also losing our capacity for rage?",
+    //     attribution: "Byung-Chul Han",
+    // },
     // {
     //     quote: "What? This isn't true! I didn't write this! Mima's Ghost: Of course you didn't. The real Mima is writing this.",
     //     attribution: "Perfect Blue",
