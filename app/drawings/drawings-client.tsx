@@ -80,29 +80,12 @@ export default function drawingsPage(){
             <div className="w-2/3 mt-10 border border-gray-400 mb-20"></div>
 
             <section className="w-2/3 flex flex-col gap-32 mb-5 max-md:w-full max-md:px-4 max-md:gap-16">
-                <div id = "jazz" className="scroll-mt-[15vh] flex items-center gap-8 max-md:flex-col-reverse max-md:items-stretch max-md:gap-4">
-                    <div className="flex-1 flex flex-col items-center gap-6">
-                        <h3 className="text-1xl font-light text-center max-w-2xl">I help with the promotional fan art at <a href="https://www.instagram.com/reel/Dc9EdRkiqd-/?utm_source=ig_web_copy_link&stkn=MzRlODBiNWFlZA==" target="_blank" rel="noopener noreferrer" className="text-[#0064C7]">Hops and Bean&apos;s monthly Jazz show.</a> More to come!</h3>
-                        <div className="flex flex-wrap items-center justify-center gap-6 max-md:gap-4">
-                            <GalleryImg src="drawing/doodle1.webp" alt="doodle 1" className="h-60 w-auto object-contain max-md:h-40" />
-                            <GalleryImg src="drawing/doodle2.jpg" alt="doodle 2" className="h-60 w-auto object-contain max-md:h-40" />
-                        </div>
-                    </div>
-                    <h2 className="text-4xl font-light w-1/6 flex-col flex shrink-0 max-md:w-full max-md:flex-row max-md:flex-wrap max-md:gap-4">
-                        <a href="#jazz" className="underline">jazz</a>
-                        <a href="#artwork" className="opacity-[0.5] !text-2xl">artwork</a>
-                        <a href="#people" className="opacity-[0.5] !text-2xl">people</a>
-                        <a href="#other" className="opacity-[0.5] !text-2xl">other</a>
-                        <a href="#ipad" className="opacity-[0.5] !text-2xl">ipad</a>
-                    </h2>
-                </div>
-
                 <div id = "artwork" className="scroll-mt-[15vh] flex items-center gap-8 max-md:flex-col max-md:items-stretch max-md:gap-4">
                     <h2 className="text-4xl font-light w-1/6 flex-col flex shrink-0 max-md:w-full max-md:flex-row max-md:flex-wrap max-md:gap-4">
-                        <a href="#jazz" className="opacity-[0.5] !text-2xl">jazz</a>
                         <a href="#artwork"  className="underline">artwork</a>
                         <a href="#people" className="opacity-[0.5] !text-2xl">people</a>
                         <a href="#other" className="opacity-[0.5] !text-2xl">other</a>
+                        <a href="#jazz" className="opacity-[0.5] !text-2xl">jazz</a>
                         <a href="#ipad" className="opacity-[0.5] !text-2xl">ipad</a>
 
                     </h2>
@@ -124,10 +107,10 @@ export default function drawingsPage(){
                         <GalleryImg src="drawing/eye_good.jpg" alt="eye good" className="h-56 w-auto object-contain max-md:h-40" />
                     </div>
                     <h2 className="text-4xl font-light w-1/6 flex-col flex shrink-0 max-md:w-full max-md:flex-row max-md:flex-wrap max-md:gap-4">
-                        <a href="#jazz" className="opacity-[0.5] !text-2xl">jazz</a>
                         <a href="#artwork" className="opacity-[0.5] !text-2xl">artwork</a>
                         <a href="#people" className="underline">people</a>
                         <a href="#other" className="opacity-[0.5] !text-2xl">other</a>
+                        <a href="#jazz" className="opacity-[0.5] !text-2xl">jazz</a>
                         <a href="#ipad" className="opacity-[0.5] !text-2xl">ipad</a>
 
                     </h2>
@@ -135,10 +118,10 @@ export default function drawingsPage(){
 
                 <div id = "other" className="scroll-mt-[15vh] flex items-center gap-8 max-md:flex-col max-md:items-stretch max-md:gap-4">
                     <h2 className="text-4xl font-light w-1/6 flex-col flex shrink-0 max-md:w-full max-md:flex-row max-md:flex-wrap max-md:gap-4">
-                        <a href="#jazz" className="opacity-[0.5] !text-2xl">jazz</a>
                         <a href="#artwork"  className="opacity-[0.5] !text-2xl">artwork</a>
                         <a href="#people" className="opacity-[0.5] !text-2xl">people</a>
                         <a href="#other" className="underline">other</a>
+                        <a href="#jazz" className="opacity-[0.5] !text-2xl">jazz</a>
                         <a href="#ipad" className="opacity-[0.5] !text-2xl">ipad</a>
 
                     </h2>
@@ -147,7 +130,25 @@ export default function drawingsPage(){
                         <GalleryImg src="drawing/other1.jpg" alt="other 1" className="h-52 w-auto object-contain max-md:h-40" />
                         <GalleryImg src="drawing/other2.jpg" alt="other 2" className="h-60 w-auto object-contain max-md:h-40" />
                         <GalleryImg src="drawing/other3.jpg" alt="other 3" className="h-56 w-auto object-contain max-md:h-40" />
+                        <GalleryImg src="drawing/pumpkins.png" alt="pumpkins" className="h-56 w-auto object-contain max-md:h-40" />
                     </div>
+                </div>
+
+                <div id = "jazz" className="scroll-mt-[15vh] flex items-center gap-8 max-md:flex-col-reverse max-md:items-stretch max-md:gap-4">
+                    <div className="flex-1 flex flex-col items-center gap-6">
+                        <h3 className="text-1xl font-light text-center max-w-2xl">I help with the promotional fan art at <a href="https://www.instagram.com/reel/Dc9EdRkiqd-/?utm_source=ig_web_copy_link&stkn=MzRlODBiNWFlZA==" target="_blank" rel="noopener noreferrer" className="text-[#0064C7]">Hops and Bean&apos;s monthly Jazz show.</a> More to come!</h3>
+                        <div className="flex flex-wrap items-center justify-center gap-6 max-md:gap-4">
+                            <GalleryImg src="drawing/doodle1.webp" alt="doodle 1" className="h-60 w-auto object-contain max-md:h-40" />
+                            <GalleryImg src="drawing/doodle2.png" alt="doodle 2" className="h-60 w-auto object-contain max-md:h-40" />
+                        </div>
+                    </div>
+                    <h2 className="text-4xl font-light w-1/6 flex-col flex shrink-0 max-md:w-full max-md:flex-row max-md:flex-wrap max-md:gap-4">
+                        <a href="#artwork" className="opacity-[0.5] !text-2xl">artwork</a>
+                        <a href="#people" className="opacity-[0.5] !text-2xl">people</a>
+                        <a href="#other" className="opacity-[0.5] !text-2xl">other</a>
+                        <a href="#jazz" className="underline">jazz</a>
+                        <a href="#ipad" className="opacity-[0.5] !text-2xl">ipad</a>
+                    </h2>
                 </div>
 
                 <div id = "ipad" className="scroll-mt-[15vh] flex text-center align-center items-center gap-8 max-md:flex-col-reverse max-md:items-stretch max-md:gap-4">
@@ -159,10 +160,10 @@ export default function drawingsPage(){
                         <GalleryImg src="drawing/faces.png" alt="faces" className="h-52 w-auto object-contain max-md:h-40" />
                     </div>
                     <h2 className="text-4xl font-light w-1/6 flex-col flex shrink-0 max-md:w-full max-md:flex-row max-md:flex-wrap max-md:gap-4">
-                        <a href="#jazz" className="opacity-[0.5] !text-2xl">jazz</a>
                         <a href="#artwork"  className="opacity-[0.5] !text-2xl">artwork</a>
                         <a href="#people" className="opacity-[0.5] !text-2xl">people</a>
                         <a href="#other" className="opacity-[0.5] !text-2xl">other</a>
+                        <a href="#jazz" className="opacity-[0.5] !text-2xl">jazz</a>
                         <a href="#ipad" className="underline">ipad</a>
 
                     </h2>

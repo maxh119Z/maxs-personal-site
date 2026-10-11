@@ -13,10 +13,21 @@ const COLLAGE_SIZES = "(max-width: 767px) 50vw, 33vw";
 const gr = (q: string) => `https://www.goodreads.com/search?q=${encodeURIComponent(q)}`;
 const CURRENT_READS: [string | null, string, string][] = [
     ["/reads/ethicalalgo.png", "The Ethical Algorithm", gr("The Ethical Algorithm Kearns Roth")],
-    ["/reads/less.webp", "Less, Andrew Sean Greer", gr("Less Andrew Sean Greer")],
-    ["/reads/gmorninggnight.jpg", "Gmorning, Gnight! Little Pep Talks for Me & You", gr("Gmorning Gnight Lin-Manuel Miranda")],
-    ["/reads/4000weeks.jpg", "Four Thousand Weeks", gr("Four Thousand Weeks Oliver Burkeman")],
     ["/reads/1984.png", "1984", gr("1984 George Orwell")],
+];
+const QUEUED_READS: [string | null, string, string][] = [
+    ["/reads/latheheaven.jpg", "The Lathe of Heaven", gr("The Lathe of Heaven Ursula Le Guin")],
+    ["/reads/dispossessed.png", "The Dispossessed", gr("The Dispossessed Ursula Le Guin")],
+    ["/reads/plowdeadbones.jpg", "Drive Your Plow Over the Bones of the Dead", gr("Drive Your Plow Over the Bones of the Dead Olga Tokarczuk")],
+    ["/reads/exhalation.jpg", "Exhalation", gr("Exhalation Ted Chiang")],
+];
+const ABANDONED_READS: [string | null, string, string][] = [
+    ["/reads/less.webp", "Less, Andrew Sean Greer", gr("Less Andrew Sean Greer")],
+    ["/reads/4000weeks.jpg", "Four Thousand Weeks", gr("Four Thousand Weeks Oliver Burkeman")],
+];
+const WAKE_UP_READS: [string | null, string, string][] = [
+    ["/reads/gmorninggnight.jpg", "Gmorning, Gnight! Little Pep Talks for Me & You", gr("Gmorning Gnight Lin-Manuel Miranda")],
+    ["/reads/disappointingaffirmations.jpg", "Disappointing Affirmations: Unfollow Your Dreams", gr("Disappointing Affirmations Unfollow Your Dreams Dave Tarnowski")],
 ];
 const RECENT_READS: [string | null, string, string][] = [
     ["/reads/weaponsofmath.png", "Weapons of Math Destruction", gr("Weapons of Math Destruction Cathy O'Neil")],
@@ -242,6 +253,38 @@ export default function moviesPage(){
                             </div>
                         </div>
                     </div>
+
+                   <section id="queued-reads" className="mt-15">
+                        <h2 className="text-4xl font-light mb-6">queued reads</h2>
+                        <div className="flex flex-wrap items-end gap-6 justify-start">
+                            {QUEUED_READS.map(([src, title, href]) => (
+                                <Book key={title} src={src} title={title} href={href} />
+                            ))}
+                        </div>
+                   </section>
+
+                   <section id="abandoned-reads" className="mt-15">
+                        <h2 className="text-4xl font-light mb-6">Abandoned (for now)</h2>
+                        <div className="flex flex-wrap items-end gap-6 justify-start">
+                            {ABANDONED_READS.map(([src, title, href]) => (
+                                <Book key={title} src={src} title={title} href={href} />
+                            ))}
+                        </div>
+                   </section>
+
+                   <section id="wake-up-reads" className="mt-15 mb-15">
+                        <h2 className="text-4xl font-light mb-6">“I wake up to…”</h2>
+                        <div className="flex flex-row items-center gap-10 max-md:flex-col max-md:items-stretch max-md:gap-6">
+                            <div className="flex flex-wrap items-end gap-6 justify-start">
+                                {WAKE_UP_READS.map(([src, title, href]) => (
+                                    <Book key={title} src={src} title={title} href={href} />
+                                ))}
+                            </div>
+                            <div className="flex-1">
+                                <p className="opacity-80">Have a yin to your yang lowkey. If you have love, also have something begging you to fail. <br></br>Ursula Le Guin: “What would a yin utopia be? It would be dark, wet, obscure, weak, yielding, passive, participatory, circular, cyclical, peaceful, nurturant, retreating, contracting, and cold.” <br></br>Randy Pausch: “The brick walls are there to give us a chance to show how badly we want something.”</p>
+                            </div>
+                        </div>
+                   </section>
                 </main>
                 <Footer></Footer>
             </div>

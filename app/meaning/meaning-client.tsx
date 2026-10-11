@@ -89,12 +89,12 @@ export default function meaningsPage() {
                     <h2 className="text-4xl font-light mb-6">locked + fun moments</h2>
                     <div className="flex flex-wrap items-end gap-6 justify-end">
                         <figure className={figClass}>
-                            <Image src="/lockedfun/1.png" alt="" width={1824} height={1108} sizes={FIG_SIZES} className={imgClass} />
-                            <figcaption className={capClass}>Studying at Sujus with Edward</figcaption>
+                            <Image src="/lockedfun/atcolm.png" alt="" width={1274} height={1142} sizes={FIG_SIZES} className={imgClass} />
+                            <figcaption className={capClass}>at <a href="https://colmweb.org/" target="_blank" rel="noopener noreferrer" className="text-[#0064C7]">COLM</a> with the coolest Jean</figcaption>
                         </figure>
                         <figure className={figClass}>
-                            <Image src="/lockedfun/2.png" alt="" width={1822} height={1038} sizes={FIG_SIZES} className={imgClass} />
-                            <figcaption className={capClass}>At NeurIPS ResponsibleFM</figcaption>
+                            <Image src="/lockedfun/adailyreminder.png" alt="" width={1278} height={1210} sizes={FIG_SIZES} className={imgClass} />
+                            <figcaption className={capClass}>a daily reminder</figcaption>
                         </figure>
                         <figure className={figClass}>
                             <Image src="/lockedfun/3.png" alt="" width={1810} height={1094} sizes={FIG_SIZES} className={imgClass} />
@@ -142,12 +142,28 @@ export default function meaningsPage() {
                             <figcaption className={capClass}>watching <Link href="https://www.imdb.com/title/tt1190634/" target="_blank" rel="noopener noreferrer" className="text-[#0064C7]">The Boys</Link> finale with coworkers at midnight</figcaption>
                         </figure>
                         <figure className={figClass}>
-                            <Image src="/others/2.png" alt="" width={1836} height={930} sizes={FIG_SIZES} className={imgClass} />
-                            <figcaption className={capClass}>globalization in Mexico City, Mexico</figcaption>
+                            <Image src="/others/thestartofmovieclub.png" alt="" width={1632} height={1170} sizes={FIG_SIZES} className={imgClass} />
+                            <figcaption className={capClass}>the start of movie club</figcaption>
                         </figure>
                         <figure className={figClass}>
-                            <Image src="/others/3.png" alt="" width={1702} height={1224} sizes={FIG_SIZES} className={imgClass} />
-                            <figcaption className={capClass}>Project Hailmary</figcaption>
+                            <Image src="/others/monthlylivejazz.png" alt="" width={1210} height={1318} sizes={FIG_SIZES} className={imgClass} />
+                            <figcaption className={capClass}>monthly live jazz</figcaption>
+                        </figure>
+                        {/* <figure className={figClass}>
+                            <Image src="/others/morelivejazz-iwishIplayedaninstruent.png" alt="" width={1208} height={1092} sizes={FIG_SIZES} className={imgClass} />
+                            <figcaption className={capClass}>more live jazz — I wish I played an instrument</figcaption>
+                        </figure> */}
+                        <figure className={figClass}>
+                            <Image src="/others/edwoodsilentfilm.png" alt="" width={1584} height={1100} sizes={FIG_SIZES} className={imgClass} />
+                            <figcaption className={capClass}>Ed Wood at Niles Silent Film</figcaption>
+                        </figure>
+                        {/* <figure className={figClass}>
+                            <Image src="/others/caranticindiantime.png" alt="" width={1526} height={1058} sizes={FIG_SIZES} className={imgClass} />
+                            <figcaption className={capClass}>Carnatic Indian music</figcaption>
+                        </figure> */}
+                        <figure className={figClass}>
+                            <Image src="/others/beattlesdayniles.png" alt="" width={948} height={768} sizes={FIG_SIZES} className={imgClass} />
+                            <figcaption className={capClass}>Beatles day in Niles</figcaption>
                         </figure>
                          <figure className={figClass}>
                             <Image src="/badminton/8.png" alt="" width={1232} height={1532} sizes={FIG_SIZES} className={imgClass} />

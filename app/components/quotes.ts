@@ -87,7 +87,7 @@ export const QUOTES: Quote[] = [
     //     attribution: "Fate zero, Gilgamesh"
     // },
     {
-        quote: "I'm having trouble because I'm a Hollywood hack who never gave real literature a shot",
+        quote: "I'm having trouble because I'm a Hollywood hack who never gave real literature a shot.",
         attribution: "Midnight in paris"
     },
     {
@@ -99,20 +99,28 @@ export const QUOTES: Quote[] = [
         attribution: "Housekeeper and the Professor"
     },
     {
-        quote: "I don’t think we’re ever going to get to utopia again by going forward, but only roundabout or sideways . . . Will you choose freedom without happiness, or happiness without freedom? The only answer one can make, I think is: No.",
+        quote: "I don’t think we’re ever going to get to utopia again by going forward, but only roundabout or sideways.",
         attribution: "Ursula Le Guin"
     },
     {
         quote: "It is not a progress toward achievement, followed by stasis, which is the machine's mode, but an interactive, rhythmic, and unstable process which constitutes an end in itself.",
         attribution: "Ursula Le Guin"
     },
+    // {
+    //     quote: "Prisons are built with stones of law",
+    //     attribution: "William Blake"
+    // },
     {
-        quote: "Prisons are built with stones of law",
-        attribution: "William Blake"
+        quote: "Like a dog with a bird at your door.",
+        attribution: "Phoebe Bridgers"
     },
     {
-        quote: "Like a dog with a bird at your door",
-        attribution: "Phoebe Bridgers"
+        quote: "Orthodoxy is unconsciousness.",
+        attribution: "1984"
+    },
+    {
+        quote: "You obviously don’t know where the bar should be, and you’re only doing a disservice by putting it anywhere.",
+        attribution: "Randy Pausch"
     }
 ];
 
