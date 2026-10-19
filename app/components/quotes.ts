@@ -115,12 +115,16 @@ export const QUOTES: Quote[] = [
         attribution: "Phoebe Bridgers"
     },
     {
-        quote: "Orthodoxy is unconsciousness.",
+        quote: "Sanity is not statistical.",
         attribution: "1984"
     },
     {
         quote: "You obviously don’t know where the bar should be, and you’re only doing a disservice by putting it anywhere.",
         attribution: "Randy Pausch"
+    },
+    {
+        quote: "One dynamic system may fall into a basin of attraction and wind up at a fixed point, while another exhibits chaotic behavior indefinitely, but both are completely deterministic.",
+        attribution: "Ted Chiang"
     }
 ];
 
