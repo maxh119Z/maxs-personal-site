@@ -12,18 +12,18 @@ const COLLAGE_SIZES = "(max-width: 767px) 50vw, 33vw";
 // reads: [cover file in /reads or null (placeholder until dropped in), title, goodreads link]
 const gr = (q: string) => `https://www.goodreads.com/search?q=${encodeURIComponent(q)}`;
 const CURRENT_READS: [string | null, string, string][] = [
-    ["/reads/ethicalalgo.png", "The Ethical Algorithm", gr("The Ethical Algorithm Kearns Roth")],
+    ["/reads/exhalation.jpg", "Exhalation", gr("Exhalation Ted Chiang")],
     ["/reads/1984.png", "1984", gr("1984 George Orwell")],
 ];
 const QUEUED_READS: [string | null, string, string][] = [
     ["/reads/latheheaven.jpg", "The Lathe of Heaven", gr("The Lathe of Heaven Ursula Le Guin")],
     ["/reads/dispossessed.png", "The Dispossessed", gr("The Dispossessed Ursula Le Guin")],
     ["/reads/plowdeadbones.jpg", "Drive Your Plow Over the Bones of the Dead", gr("Drive Your Plow Over the Bones of the Dead Olga Tokarczuk")],
-    ["/reads/exhalation.jpg", "Exhalation", gr("Exhalation Ted Chiang")],
 ];
 const ABANDONED_READS: [string | null, string, string][] = [
     ["/reads/less.webp", "Less, Andrew Sean Greer", gr("Less Andrew Sean Greer")],
     ["/reads/4000weeks.jpg", "Four Thousand Weeks", gr("Four Thousand Weeks Oliver Burkeman")],
+    ["/reads/ethicalalgo.png", "The Ethical Algorithm", gr("The Ethical Algorithm Kearns Roth")],
 ];
 const WAKE_UP_READS: [string | null, string, string][] = [
     ["/reads/gmorninggnight.jpg", "Gmorning, Gnight! Little Pep Talks for Me & You", gr("Gmorning Gnight Lin-Manuel Miranda")],
