@@ -124,11 +124,11 @@ export const QUOTES: Quote[] = [
     // },
     {
         quote: "One dynamic system may fall into a basin of attraction and wind up at a fixed point, while another exhibits chaotic behavior indefinitely, but both are completely deterministic.",
-        attribution: "What's expected of us - Ted Chiang"
+        attribution: "What's Expected of Us"
     },
     {
         quote: "They didn’t do it maliciously. They just weren’t paying attention",
-        attribution: "The Great Silence - Ted Chiang"
+        attribution: "The Great Silence"
     },
 ];
 
