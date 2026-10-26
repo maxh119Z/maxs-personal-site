@@ -19,7 +19,7 @@ export const QUOTES: Quote[] = [
     },
     {
         quote: "Maybe I'm one of those people that has always wanted to do it, but it's like a pipe dream for me, you know? And then, you said it, you change your dreams, and then you grow up.",
-        attribution: "Mia",
+        attribution: "La La Land - Mia",
     },
     // {
     //     quote: "Seita. Thank you.",
@@ -88,7 +88,7 @@ export const QUOTES: Quote[] = [
     // },
     {
         quote: "I'm having trouble because I'm a Hollywood hack who never gave real literature a shot.",
-        attribution: "Midnight in paris"
+        attribution: "Midnight in Paris"
     },
     {
         quote: "TONY ‘Mr. Wood, I only got one hour of sleep.’ ED ‘Yeah? Well I got no sleep, and I feel great!’",
@@ -118,17 +118,21 @@ export const QUOTES: Quote[] = [
         quote: "Sanity is not statistical.",
         attribution: "1984"
     },
-    // {
-    //     quote: "You obviously don’t know where the bar should be, and you’re only doing a disservice by putting it anywhere.",
-    //     attribution: "Randy Pausch"
-    // },
+    {
+        quote: "You obviously don’t know where the bar should be, and you’re only doing a disservice by putting it anywhere.",
+        attribution: "Randy Pausch"
+    },
     {
         quote: "One dynamic system may fall into a basin of attraction and wind up at a fixed point, while another exhibits chaotic behavior indefinitely, but both are completely deterministic.",
-        attribution: "What's Expected of Us"
+        attribution: "What's Expected of Us - Ted Chiang"
     },
     {
         quote: "They didn’t do it maliciously. They just weren’t paying attention",
-        attribution: "The Great Silence"
+        attribution: "The Great Silence - Ted Chiang"
     },
+    {
+        quote: "Experience is algorithmically incompressible",
+        attribution: "TThe lifecycle of software objects - Ted Chiang"
+    }
 ];
 
