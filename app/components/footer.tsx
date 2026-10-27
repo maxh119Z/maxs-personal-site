@@ -21,6 +21,7 @@ export default function Footer() {
                 </Link>
                 <Link href="https://letterboxd.com/maxz119/" target="_blank" rel="noopener noreferrer">letterboxd</Link>
                 <Link href="https://www.instagram.com/maxzhang19/" target="_blank" rel="noopener noreferrer">instagram</Link>
+                <Link href="https://tile-drop.com/maxzhang1" target="_blank" rel="noopener noreferrer">tile-drop</Link>
             </div>
         </div>
     </footer>

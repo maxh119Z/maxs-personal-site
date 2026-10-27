@@ -39,7 +39,7 @@ export default function HeaderMeaning({ shake = false }: { shake?: boolean }) {
                 </div>
             </div>
             <div className="mt-4 flex flex-row w-full items-start max-md:flex-col max-md:items-center">
-                <div className="w-19/48 flex flex-col gap-4 max-md:w-2/3 max-md:items-center">
+                <div className="w-19/48 flex flex-col gap-4 h-[calc(100vh-100px)] max-md:w-2/3 max-md:h-auto max-md:items-center">
                     <Image
                         src="/selfie.jpeg"
                         alt="Max Zhang"
@@ -51,6 +51,7 @@ export default function HeaderMeaning({ shake = false }: { shake?: boolean }) {
                         <h2 className="opacity-80">{quote}</h2>
                         <h3 className="opacity-50"> {attribution}<button onClick={()=>window.location.reload()} className="pointer-events-auto ml-5 text-[#0064C7]">Refresh</button><Link className="ml-5 text-[#0064C7]" href="https://github.com/maxh119Z/simple-personal-quotes" target="_blank" rel="noopener noreferrer">your own mac widget</Link></h3>
                     </div>
+                    <p className="mt-auto mb-4 opacity-60 max-md:mt-6 max-md:text-center">My friend made a cool profile-sharing bento site. Here&apos;s <a href="https://tile-drop.com/maxzhang1" target="_blank" rel="noopener noreferrer" className="text-[#0064C7]">mine</a>. Consider making your <a href="https://tile-drop.com/" target="_blank" rel="noopener noreferrer" className="text-[#0064C7]">own</a>.</p>
                 </div>
                 <div id="welcome" className="w-29/48 flex flex-col h-[calc(100vh-100px)] max-md:w-full max-md:h-auto max-md:items-center">
                     <div className="text-2xl max-md:flex max-md:flex-col max-md:items-center">
