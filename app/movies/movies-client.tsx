@@ -15,9 +15,6 @@ const CURRENT_READS: [string | null, string, string][] = [
     ["/reads/exhalation.jpg", "Exhalation", gr("Exhalation Ted Chiang")],
     ["/reads/sower.png", "Parable of the Sower", gr("Parable of the Sower Octavia Butler")],
 ];
-const FINISHED_READS: [string | null, string, string][] = [
-    ["/reads/1984.png", "1984", gr("1984 George Orwell")],
-];
 const QUEUED_READS: [string | null, string, string][] = [
     ["/reads/latheheaven.jpg", "The Lathe of Heaven", gr("The Lathe of Heaven Ursula Le Guin")],
     ["/reads/dispossessed.png", "The Dispossessed", gr("The Dispossessed Ursula Le Guin")],
@@ -34,6 +31,7 @@ const WAKE_UP_READS: [string | null, string, string][] = [
     ["/reads/disappointingaffirmations.jpg", "Disappointing Affirmations: Unfollow Your Dreams", gr("Disappointing Affirmations Unfollow Your Dreams Dave Tarnowski")],
 ];
 const RECENT_READS: [string | null, string, string][] = [
+    ["/reads/1984.png", "1984", gr("1984 George Orwell")],
     ["/reads/weaponsofmath.png", "Weapons of Math Destruction", gr("Weapons of Math Destruction Cathy O'Neil")],
     ["/reads/memory-police.jpg", "The Memory Police", gr("The Memory Police Yoko Ogawa")],
     ["/reads/housekeeper.jpg", "The Housekeeper and the Professor", gr("The Housekeeper and the Professor Yoko Ogawa")],
@@ -78,15 +76,6 @@ export default function moviesPage(){
                         <h2 className="text-4xl font-light mb-6">recent reads (since summer)</h2>
                         <div className="flex flex-wrap items-end gap-6 justify-start">
                             {RECENT_READS.map(([src, title, href]) => (
-                                <Book key={title} src={src} title={title} href={href} />
-                            ))}
-                        </div>
-                   </section>
-
-                   <section id="finished-reads" className="mt-15">
-                        <h2 className="text-4xl font-light mb-6">finished reads</h2>
-                        <div className="flex flex-wrap items-end gap-6 justify-start">
-                            {FINISHED_READS.map(([src, title, href]) => (
                                 <Book key={title} src={src} title={title} href={href} />
                             ))}
                         </div>
