@@ -173,6 +173,10 @@ export default function meaningsPage() {
                             <Image src="/others/sunset.jpeg" alt="" width={2304} height={1536} sizes={FIG_SIZES} className={imgClass} />
                             <figcaption className={capClass}>mount tam sunset</figcaption>
                         </figure>
+                        <figure className={figClass}>
+                            <Image src="/others/hoco.jpeg" alt="" width={768} height={1024} sizes={FIG_SIZES} className={imgClass} />
+                            <figcaption className={capClass}>homecoming</figcaption>
+                        </figure>
                     </div>
                 </section>
             </main>

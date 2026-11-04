@@ -13,12 +13,16 @@ const COLLAGE_SIZES = "(max-width: 767px) 50vw, 33vw";
 const gr = (q: string) => `https://www.goodreads.com/search?q=${encodeURIComponent(q)}`;
 const CURRENT_READS: [string | null, string, string][] = [
     ["/reads/exhalation.jpg", "Exhalation", gr("Exhalation Ted Chiang")],
+    ["/reads/sower.png", "Parable of the Sower", gr("Parable of the Sower Octavia Butler")],
+];
+const FINISHED_READS: [string | null, string, string][] = [
     ["/reads/1984.png", "1984", gr("1984 George Orwell")],
 ];
 const QUEUED_READS: [string | null, string, string][] = [
     ["/reads/latheheaven.jpg", "The Lathe of Heaven", gr("The Lathe of Heaven Ursula Le Guin")],
     ["/reads/dispossessed.png", "The Dispossessed", gr("The Dispossessed Ursula Le Guin")],
     ["/reads/plowdeadbones.jpg", "Drive Your Plow Over the Bones of the Dead", gr("Drive Your Plow Over the Bones of the Dead Olga Tokarczuk")],
+    ["/reads/withonevoice.jpeg", "With One Voice: Mandarin’s Conquest of China", gr("With One Voice Mandarin's Conquest of China Jeffrey Weng")],
 ];
 const ABANDONED_READS: [string | null, string, string][] = [
     ["/reads/less.webp", "Less, Andrew Sean Greer", gr("Less Andrew Sean Greer")],
@@ -74,6 +78,15 @@ export default function moviesPage(){
                         <h2 className="text-4xl font-light mb-6">recent reads (since summer)</h2>
                         <div className="flex flex-wrap items-end gap-6 justify-start">
                             {RECENT_READS.map(([src, title, href]) => (
+                                <Book key={title} src={src} title={title} href={href} />
+                            ))}
+                        </div>
+                   </section>
+
+                   <section id="finished-reads" className="mt-15">
+                        <h2 className="text-4xl font-light mb-6">finished reads</h2>
+                        <div className="flex flex-wrap items-end gap-6 justify-start">
+                            {FINISHED_READS.map(([src, title, href]) => (
                                 <Book key={title} src={src} title={title} href={href} />
                             ))}
                         </div>

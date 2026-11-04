@@ -1,5 +1,14 @@
 // top = more recently watched
 export const MOVIES: [string, number][] = [
+    ["You Can See Everything", 8.4],
+    ["Everything Everywhere All at Once", 9],
+    ["Pan's Labyrinth", 8],
+    ["Ed Wood", 8.1],
+    ["Midnight in Paris", 8.3],
+    ["Didi", 7.5],
+    ["In the Mood for Love", 8.6],
+    ["500 Days of Summer", 8],
+    ["Your Name", 8],
     ["Adaptation", 8.5],
     ["Loki2", 7.5],
     ["Hadestown", 9],

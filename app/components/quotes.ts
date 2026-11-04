@@ -114,25 +114,33 @@ export const QUOTES: Quote[] = [
         quote: "Like a dog with a bird at your door.",
         attribution: "Phoebe Bridgers"
     },
-    {
-        quote: "Sanity is not statistical.",
-        attribution: "1984"
-    },
-    {
-        quote: "You obviously don’t know where the bar should be, and you’re only doing a disservice by putting it anywhere.",
-        attribution: "Randy Pausch"
-    },
+    // {
+    //     quote: "Sanity is not statistical.",
+    //     attribution: "1984"
+    // },
+    // {
+    //     quote: "You obviously don’t know where the bar should be, and you’re only doing a disservice by putting it anywhere.",
+    //     attribution: "Randy Pausch"
+    // },
     {
         quote: "One dynamic system may fall into a basin of attraction and wind up at a fixed point, while another exhibits chaotic behavior indefinitely, but both are completely deterministic.",
-        attribution: "What's Expected of Us - Ted Chiang"
+        attribution: "What's Expected of Us"
     },
     {
         quote: "They didn’t do it maliciously. They just weren’t paying attention",
-        attribution: "The Great Silence - Ted Chiang"
+        attribution: "The Great Silence"
     },
     {
         quote: "Experience is algorithmically incompressible",
-        attribution: "TThe lifecycle of software objects - Ted Chiang"
+        attribution: "The lifecycle of software objects"
+    },
+    {
+        quote: "Instead I will say that it’s easier for me to appreciate the benefits of literacy and harder to recognize everything it has cost us.",
+        attribution: "Ted Chiang"
+    },
+    {
+        quote: "I’ll have to do something about it. / That reality scares me to death.",
+        attribution: "Parable of the Sower"
     }
 ];
 
