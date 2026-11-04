@@ -139,7 +139,7 @@ export const QUOTES: Quote[] = [
         attribution: "Ted Chiang"
     },
     {
-        quote: "I’ll have to do something about it. / That reality scares me to death.",
+        quote: "I’ll have to do something about it. That reality scares me to death.",
         attribution: "Parable of the Sower"
     }
 ];
