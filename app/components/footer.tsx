@@ -19,9 +19,13 @@ export default function Footer() {
                         <path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67h-3.55V9h3.41v1.56h.05c.48-.91 1.65-1.85 3.4-1.85 3.64 0 4.31 2.4 4.31 5.52v6.22zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/>
                     </svg>
                 </Link>
+                <Link href="https://scholar.google.com/citations?hl=en&user=W_7mqfAAAAAJ" target="_blank" rel="noopener noreferrer" aria-label="google scholar" className="hover:opacity-70">
+                    <svg viewBox="0 0 24 24" className="w-6 h-6" fill="currentColor" aria-hidden="true">
+                        <path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/>
+                    </svg>
+                </Link>
                 <Link href="https://letterboxd.com/maxz119/" target="_blank" rel="noopener noreferrer">letterboxd</Link>
                 <Link href="https://www.instagram.com/maxzhang19/" target="_blank" rel="noopener noreferrer">instagram</Link>
-                <Link href="https://tile-drop.com/maxzhang1" target="_blank" rel="noopener noreferrer">tile-drop</Link>
             </div>
         </div>
     </footer>

@@ -130,10 +130,10 @@ export const QUOTES: Quote[] = [
         quote: "They didn’t do it maliciously. They just weren’t paying attention",
         attribution: "The Great Silence"
     },
-    {
-        quote: "We like the idea that there's always someone responsible for any given event . . . We like that so much that sometimes we blame ourselves . . . But not everything is under our control, or even anyone's control.",
-        attribution: "Anxiety is the Dizziness of Freedom"
-    },
+    // {
+    //     quote: "We like the idea that there's always someone responsible for any given event . . . We like that so much that sometimes we blame ourselves . . . But not everything is under our control, or even anyone's control.",
+    //     attribution: "Anxiety is the Dizziness of Freedom"
+    // },
     {
         quote: "Instead I will say that it’s easier for me to appreciate the benefits of literacy and harder to recognize everything it has cost us.",
         attribution: "Ted Chiang"
@@ -141,6 +141,10 @@ export const QUOTES: Quote[] = [
     {
         quote: "I’ll have to do something about it. That reality scares me to death.",
         attribution: "Parable of the Sower"
+    },
+    {
+        quote: "Every time I understand a little more, I wonder why it's taken me so long . . . [to understand] a thing so obvious and real and true",
+        attribution: "Parable of the Sower"
     }
-];
+]
 
