@@ -112,7 +112,7 @@ export const QUOTES: Quote[] = [
     // },
     {
         quote: "Like a dog with a bird at your door.",
-        attribution: "Phoebe Bridgers"
+        attribution: "PB"
     },
     // {
     //     quote: "Sanity is not statistical.",
@@ -122,10 +122,10 @@ export const QUOTES: Quote[] = [
     //     quote: "You obviously don’t know where the bar should be, and you’re only doing a disservice by putting it anywhere.",
     //     attribution: "Randy Pausch"
     // },
-    {
-        quote: "One dynamic system may fall into a basin of attraction and wind up at a fixed point, while another exhibits chaotic behavior indefinitely, but both are completely deterministic.",
-        attribution: "What's Expected of Us"
-    },
+    // {
+    //     quote: "One dynamic system may fall into a basin of attraction and wind up at a fixed point, while another exhibits chaotic behavior indefinitely, but both are completely deterministic.",
+    //     attribution: "What's Expected of Us"
+    // },
     {
         quote: "They didn’t do it maliciously. They just weren’t paying attention",
         attribution: "The Great Silence"
@@ -145,6 +145,26 @@ export const QUOTES: Quote[] = [
     {
         quote: "Every time I understand a little more, I wonder why it's taken me so long . . . [to understand] a thing so obvious and real and true",
         attribution: "Parable of the Sower"
+    },
+    {
+        quote: "The only lasting truth is change. God is Change.",
+        attribution: "Parable of the Sower"
+    },
+    {
+        quote: "We're strong and healthy and better educated than most people our age. But we're stupid out here.",
+        attribution: "Parable of the Sower"
+    },
+    {
+        quote: "We gon' be alright.",
+        attribution: "To pimp a butterfly"
+    },
+    {
+        quote: "I know what I know and I know it well not to ever forget. Until I realized I didn't know shit.",
+        attribution: "To pimp a butterfly"
+    },
+    {
+        quote: "Hard to complain from this five-star hotel",
+        attribution: "Mac Miller"
     }
 ]
 
