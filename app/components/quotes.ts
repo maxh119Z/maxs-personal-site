@@ -159,7 +159,7 @@ export const QUOTES: Quote[] = [
         attribution: "To pimp a butterfly"
     },
     {
-        quote: "I know what I know and I know it well not to ever forget. Until I realized I didn't know shit.",
+        quote: "I know what I know and I know it well not to ever forget. Until I realized I didn't know [anything].",
         attribution: "To pimp a butterfly"
     },
     {
