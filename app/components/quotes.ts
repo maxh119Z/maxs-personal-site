@@ -163,7 +163,7 @@ export const QUOTES: Quote[] = [
         attribution: "To pimp a butterfly"
     },
     {
-        quote: "Hard to complain from this five-star hotel",
+        quote: "Hard to complain from this five-star hotel.",
         attribution: "Mac Miller"
     }
 ]
